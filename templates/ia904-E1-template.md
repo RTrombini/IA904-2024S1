@@ -1,5 +1,5 @@
 # `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `<Project Title in English>`
 
 ## Apresentação
 
@@ -37,3 +37,6 @@ Título da Base | http://base1.org/ | Breve resumo (duas ou três linhas) sobre 
 
 ## Cronograma
 > Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
+
+## Referências
+> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
