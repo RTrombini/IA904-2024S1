@@ -10,7 +10,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 > |--|--|--|
 > | Raphael Melloni Trombini  | 271322 | Aluno Especial|
 > | Ícaro Dias dos Santos   | 245542  | Doutorado em yyyy|
-> | Nome3  | 345678  | Graduação em zzzz|
+> | José Alfredo Zapana García  | 272291 | Mestrado em Engenharia Elétrica|
 
 ## Descrição do Projeto
 O objetivo deste projeto é desenvolver um sistema capaz de identificar e interpretar sinais de mão de mergulhadores, utilizando técnicas de visão computacional, para facilitar a comunicação subaquática e melhorar a segurança durante mergulhos. Este trabalho se inspira e busca contribuir para os objetivos do projeto CADDY, um projeto da União Europeia focado no desenvolvimento de tecnologias para entender e interagir com mergulhadores em ambientes subaquáticos. Os principais objetivos do CADDY incluem a compreensão do comportamento do mergulhador através da interpretação de gestos manuais simbólicos e outros indicadores não verbais, além do desenvolvimento de sistemas cognitivos de (re)planejamento de missões com base nessas interações. O projeto também explora a integração com o 'Caddian corpus', um conjunto extenso de comandos sintaticamente e semanticamente corretos dentro da linguagem hierárquica multi-AUV denominada Caddian, que foi especialmente desenvolvida para o projeto CADDY. Este corpus serve como base para o entendimento e a interpretação das interações subaquáticas, contendo desde comandos simples até sequências mais complexas de gestos.
@@ -21,7 +21,7 @@ Estamos considerando duas abordagens principais para o desenvolvimento do sistem
 ## Bases de Dados e Evolução
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://caddy-dataset.org) | Conjunto de dados composto por 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
+CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://www.caddian.eu//CADDY-Underwater-Gestures-Dataset.html) | Conjunto de dados composto por 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
 
 ## Ferramentas
 As principais ferramentas a serem utilizadas incluem Python, PyTorch, OpenCV para processamento de imagens, e possivelmente TensorFlow/Keras.
