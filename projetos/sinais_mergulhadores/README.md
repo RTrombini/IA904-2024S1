@@ -21,7 +21,7 @@ Estamos considerando duas abordagens principais para o desenvolvimento do sistem
 ## Bases de Dados e Evolução
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://caddy-dataset.org) | 10K stereo pair images collected in 8 different scenarios for underwater human-robot interaction.
+CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://caddy-dataset.org) | Conjunto de dados composto por 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
 
 ## Ferramentas
 As principais ferramentas a serem utilizadas incluem Python, TensorFlow/Keras, OpenCV para processamento de imagens, e possivelmente PyTorch.
