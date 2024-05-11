@@ -30,7 +30,7 @@ Assim, poderemos estudar os melhores modelos e ajustes de hiperparâmetros que e
 ## Bases de Dados e Evolução
 A base de dados que será utilizada será a [FairFace](https://github.com/joojs/fairface). Um conjunto de dados de atributos faciais para raças, gêneros e idades equilibrados. [1] Conhecida por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir
 
-![Gráfico]("./assets/grafico_dados.jpg")
+![Gráfico](.\assets\grafico_dados.jpg)
 
 A base de dados possui dois conjunto separados, um composto para o treino, com 86744 imagens, e o outro composto para a validação, com 10954 imagens. Além do gráfico, podemos analisar os dados de balanceamento através da tabela a seguir, com a quantidade de imagens para cada etnia no conjunto de treino e validação.
 
@@ -62,3 +62,4 @@ FairFace | https://github.com/dchen236/FairFace | Um conjunto de dados de atribu
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+[1] https://github.com/joojs/fairface
