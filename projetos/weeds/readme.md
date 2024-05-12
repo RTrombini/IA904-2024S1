@@ -39,9 +39,9 @@ Base de Dados | Endereço na Web | Resumo descritivo
 > | Aquisição de dados | X | | | | |
 > | Pré-processamento |  X | X | | | |
 > | Modelo linha de base |   | X |  |  | |
-> | Apresentação de resultados preliminares |   |  | X |  | |
+> | Apresentação dos resultados preliminares |   |  | X |  | |
 > | Experimentação |   |  | X | X | X |
-> | Avaliação |   |  |  |  | X |
+> | Avaliação |   |  |  | X | X |
 > | Apresentação final |   |  |  |  | X |
 
 ## Referências
