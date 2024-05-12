@@ -36,9 +36,9 @@ Base de Dados | Endereço na Web | Resumo descritivo
 
 > |Atividades  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| 
 > |--|:--:|:--:|:--:|:--:|:--:|
-> | Atividade 1 | X | | | | |
-> | Atividade 2 |   | X | | | |
-> | Atividade 3 |   | | X |  | |
+> | Aquisição de dados | X | | | | |
+> | Pré-processamento |  X | X | | | |
+> | Modelo linha de base |   | X |  |  | |
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
