@@ -23,6 +23,52 @@ Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
 CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://www.caddian.eu//CADDY-Underwater-Gestures-Dataset.html) | Conjunto de dados composto por 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
 
+A distribuição do conjunto de dados cruos é a seguinte:
+
+### De acordo à presença de gestos
+
+|  Classe  | Total fotos estéreo |
+|----------|---------------------|
+| Positiva |       9239          |
+| Negativa |       7190          |
+
+### Distribuição de comandos
+
+| Comando         | ID de classe | Total fotos estéreo |
+|-----------------|--------------|---------------------|
+| Start_comm      | 0            | 1820     		   |
+| End_comm        | 1            | 1318     		   |
+| Up              | 2    		 | 352      		   |
+| Down            | 3    		 | 462      		   |
+| Photo           | 4    		 | 925     			   |
+| Backwards       | 5    		 | 561     			   |
+| Carry           | 6   		 | 717     			   |
+| Boat            | 7    		 | 369     			   |
+| Here            | 8    		 | 261     			   |
+| Mosaic          | 9  		     | 226     			   |
+| Num_delimiter   | 10   		 | 992     			   |
+| One             | 11   		 | 161     			   |
+| Two             | 12   		 | 404      		   |
+| Three           | 13   		 | 388      		   |
+| Four            | 14   		 | 235     			   |
+| Five            | 15   		 | 48       		   |
+
+
+<details>
+<summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
+
+| Comando            | Exemplo               | Comando            | Exemplo               |
+|-------------------------|-------------------------|-------------------------|-------------------------|
+| Start_comm | ![Image 1](./data/raw/biograd-A/true_positives/raw/biograd-A_00034_left.jpg) | End_comm | ![Image 2](./data/raw/biograd-A/true_positives/raw/biograd-A_00025_left.jpg) |
+| Up | ![Image 3](./data/raw/biograd-A/true_positives/raw/biograd-A_00235_left.jpg) | Down | ![Image 4](./data/raw/biograd-A/true_positives/raw/biograd-A_00311_left.jpg) |
+| Photo | ![Image 5](./data/raw/biograd-A/true_positives/raw/biograd-A_01200_left.jpg) | Backwards | ![Image 6](./data/raw//biograd-A/true_positives/raw/biograd-A_00404_left.jpg) |
+| Carry | ![Image 7](./data/raw/biograd-A/true_positives/raw/biograd-A_01022_left.jpg) | Boat | ![Image 8](./data/raw/biograd-A/true_positives/raw/biograd-A_01004_left.jpg) |
+| Here | ![Image 9](./data/raw/biograd-A/true_positives/raw/biograd-A_01039_left.jpg) | Mosaic | ![Image 10](./data/raw/biograd-A/true_positives/raw/biograd-A_00689_left.jpg) |
+| Num_delimiter | ![Image 11](./data/raw/biograd-A/true_positives/raw/biograd-A_00000_left.jpg) | One | ![Image 12](./data/raw/biograd-A/true_positives/raw/biograd-A_00039_left.jpg) |
+| Two | ![Image 13](./data/raw/biograd-A/true_positives/raw/biograd-A_00048_left.jpg) | Three | ![Image 14](./data/raw/biograd-A/true_positives/raw/biograd-A_00068_left.jpg) |
+| Four | ![Image 15](./data/raw/biograd-A/true_positives/raw/biograd-A_00086_left.jpg) | Five | ![Image 16](./data/raw/biograd-A/true_positives/raw/biograd-A_00006_left.jpg) |
+</details>
+
 ## Ferramentas
 As principais ferramentas a serem utilizadas incluem Python, PyTorch, OpenCV para processamento de imagens, e possivelmente TensorFlow/Keras.
 
