@@ -34,7 +34,7 @@ Base de Dados | Endereço na Web | Resumo descritivo
 
 ## Cronograma
 
-> |Atividade  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| 
+> |Atividades  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| 
 > |--|:--:|:--:|:--:|:--:|:--:|
 > | Atividade 1 | X | | | | |
 > | Atividade 2 |   | X | | | |
