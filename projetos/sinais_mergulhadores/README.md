@@ -69,11 +69,11 @@ A distribuição do conjunto de dados é a seguinte:
 </details>
 
 ## Ferramentas
--Linguagem de programação principal: Python 
--Bibliotecas para pré-processamento de imagens: OpenCV, Pillow (PIL), Numpy
--Bibliotecas para aumento de imagens: Torchvision
--Bibliotecas para Deep Learning: Pytorch, TensorFlow/Keras (possivelmente)
--Bibliotecas para avaliação dos modelos: Pytorch e Sklearn (métricas), Matplotlib (visualização)
+- Linguagem de programação principal: Python 
+- Bibliotecas para pré-processamento de imagens: OpenCV, Pillow (PIL), Numpy
+- Bibliotecas para aumento de imagens: Torchvision
+- Bibliotecas para Deep Learning: Pytorch, TensorFlow/Keras (possivelmente)
+- Bibliotecas para avaliação dos modelos: Pytorch e Sklearn (métricas), Matplotlib (visualização)
 
 ## Principais desafios
 Os principais desafios incluem a variação das condições de iluminação subaquática, a qualidade das imagens e a precisão na detecção dos gestos em ambientes complexos. Além disso, as luvas Caddian, usadas nos testes do projeto CADDY, apresentam um design customizado com símbolos e cores para facilitar a detecção por Veículos Autônomos Subaquáticos (AUVs). Este design pode aumentar o risco de overfitting do modelo, limitando sua aplicabilidade em condições normais, sem luvas especiais. Será crucial avaliar a generalidade do modelo e explorar estratégias para adaptá-lo a um uso mais amplo, sem depender dessas características específicas das luvas. 
