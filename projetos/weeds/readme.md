@@ -34,7 +34,7 @@ Base de Dados | Endereço na Web | Resumo descritivo
 
 ## Cronograma
 
-O cronogrma abaixo corresponde ao perído de 13/05/2024 a 23/06/2024 equivalente a 6 semanas.
+O cronogrma abaixo corresponde ao perído de 13/05/2024 a 23/06/2024 equivalente a seis semanas.
 
 > |Atividades  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| Semana 6| 
 > |--|:--:|:--:|:--:|:--:|:--:|:--:|
