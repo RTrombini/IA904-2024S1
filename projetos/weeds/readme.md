@@ -34,15 +34,17 @@ Base de Dados | Endereço na Web | Resumo descritivo
 
 ## Cronograma
 
-> |Atividades  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| 
-> |--|:--:|:--:|:--:|:--:|:--:|
-> | Aquisição de dados | X | | | | |
-> | Pré-processamento |  X | X | | | |
-> | Modelo linha de base |   | X |  |  | |
-> | Apresentação dos resultados preliminares |   |  | X |  | |
-> | Experimentação |   |  | X | X | X |
-> | Avaliação |   |  |  | X | X |
-> | Apresentação final |   |  |  |  | X |
+O cronogrma abaixo corresponde ao perído de 13/05/2024 a 23/06/2024 equivalente a 6 semanas.
+
+> |Atividades  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| Semana 6| 
+> |--|:--:|:--:|:--:|:--:|:--:|:--:|
+> | Aquisição de dados | X | | | | | |
+> | Pré-processamento |  X | X | | | | |
+> | Modelo linha de base |   | X |  |  | | |
+> | Apresentação dos resultados preliminares |   |  | X |  | | |
+> | Experimentação |   |  | | X | X | X |
+> | Avaliação |   |  |  |  | X | X |
+> | Apresentação final |   |  |  |  |  | X|
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
