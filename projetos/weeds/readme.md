@@ -46,9 +46,9 @@ O cronogrma abaixo corresponde ao perído de 13/05/2024 a 23/06/2024 equivalente
 > | Apresentação final |   |  |  |  |  | X|
 
 ## Referências
-1. Sportelli, Mino, et al. "Evaluation of YOLO object detectors for weed detection in different turfgrass scenarios." Applied Sciences 13.14 (2023): 8502.
-2. Wang, Aichen, Wen Zhang, and Xinhua Wei. "A review on weed detection using ground-based machine vision and image processing techniques." Computers and electronics in agriculture 158 (2019): 226-240.
-3. Molina-Villa, Manuel Alejandro, and Leonardo Enrique Solaque-Guzmán. "Machine vision system for weed detection using image filtering in vegetables crops." Revista Facultad de Ingeniería Universidad de Antioquia 80 (2016): 124-130.
-4. Wu, Zhangnan, et al. "Review of weed detection methods based on computer vision." Sensors 21.11 (2021): 3647.
-5. Startups, A. Weeds Dataset. [S.l.]: Roboflow, nov. 2021. https://universe.roboflow.com/augmented-startups/weeds-nxe1w. visited on 2024-05-05 Disponível em: <https://universe.roboflow.com/augmented-startups/weeds-nxe1w> 
+> 1. Sportelli, Mino, et al. "Evaluation of YOLO object detectors for weed detection in different turfgrass scenarios." Applied Sciences 13.14 (2023): 8502.
+> 2. Wang, Aichen, Wen Zhang, and Xinhua Wei. "A review on weed detection using ground-based machine vision and image processing techniques." Computers and electronics in agriculture 158 (2019): 226-240.
+> 3. Molina-Villa, Manuel Alejandro, and Leonardo Enrique Solaque-Guzmán. "Machine vision system for weed detection using image filtering in vegetables crops." Revista Facultad de Ingeniería Universidad de Antioquia 80 (2016): 124-130.
+> 4. Wu, Zhangnan, et al. "Review of weed detection methods based on computer vision." Sensors 21.11 (2021): 3647.
+> 5. Startups, A. Weeds Dataset. [S.l.]: Roboflow, nov. 2021. https://universe.roboflow.com/augmented-startups/weeds-nxe1w. visited on 2024-05-05 Disponível em: <https://universe.roboflow.com/augmented-startups/weeds-nxe1w> 
 
