@@ -1,7 +1,6 @@
-# ATENÇÃO
+# IA904-2024S1
+IA904 - Projeto de Modelos em Computação Visual
 
-Não altere este arquivo readme.md
+Profa. Leticia Rittner e Profa. Paula D. Paro Costa
 
-Crie uma pasta com o nome do seu projeto dentro desta pasta.
-
-Só adicione arquivos à sua pasta de projetos.
+1o. Semestre de 2024
