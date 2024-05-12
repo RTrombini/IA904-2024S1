@@ -38,7 +38,7 @@ Base de Dados | Endereço na Web | Resumo descritivo
 > |--|:--:|:--:|:--:|:--:|:--:|
 > | Atividade 1 | X | | | | |
 > | Atividade 2 |   | X | | | |
-> | Atividade 3 |   | | | X | |
+> | Atividade 3 |   | | X |  | |
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
