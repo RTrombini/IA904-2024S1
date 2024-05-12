@@ -9,7 +9,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Raphael Melloni Trombini  | 271322 | Aluno Especial|
-> | Ícaro Dias dos Santos   | 245542  | Doutorado em yyyy|
+> | Ícaro Dias dos Santos   | 245542  | Mestrado em Engenharia Mecánica|
 > | José Alfredo Zapana García  | 272291 | Mestrado em Engenharia Elétrica|
 
 ## Descrição do Projeto
@@ -21,9 +21,9 @@ Estamos considerando duas abordagens principais para o desenvolvimento do sistem
 ## Bases de Dados e Evolução
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://www.caddian.eu//CADDY-Underwater-Gestures-Dataset.html) | Conjunto de dados composto por 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
+CADDY Underwater Gestures Dataset | [CADDY Dataset Homepage](http://www.caddian.eu//CADDY-Underwater-Gestures-Dataset.html) | Conjunto de dados composto por aproximadamente 10.000 pares de imagens estéreo coletadas em 8 cenários diferentes para interação subaquática humano-robô e contem imágens para 16 gestos da linguagem Caddian. As imagens foram capturadas durante experimentos que simulam diversas condições e tarefas subaquáticas, com o objetivo de desenvolver e testar sistemas de reconhecimento de gestos que facilitam a comunicação entre mergulhadores e veículos autônomos subaquáticos (AUVs). Cada cenário reflete um contexto específico de mergulho, variando desde ambientes com visibilidade reduzida até situações com iluminação artificial, projetados para desafiar e aprimorar a capacidade dos sistemas robóticos em entender e reagir a comandos humanos no ambiente subaquático.
 
-A distribuição do conjunto de dados cruos é a seguinte:
+A distribuição do conjunto de dados é a seguinte:
 
 ### De acordo à presença de gestos
 
@@ -32,7 +32,7 @@ A distribuição do conjunto de dados cruos é a seguinte:
 | Positiva |       9239          |
 | Negativa |       7190          |
 
-### Distribuição de comandos
+### De acordo ao gesto realizado
 
 | Comando         | ID de classe | Total fotos estéreo |
 |-----------------|--------------|---------------------|
@@ -53,27 +53,30 @@ A distribuição do conjunto de dados cruos é a seguinte:
 | Four            | 14   		 | 235     			   |
 | Five            | 15   		 | 48       		   |
 
-
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
 
 | Comando            | Exemplo               | Comando            | Exemplo               |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-| Start_comm | ![Image 1](./data/raw/biograd-A/true_positives/raw/biograd-A_00034_left.jpg) | End_comm | ![Image 2](./data/raw/biograd-A/true_positives/raw/biograd-A_00025_left.jpg) |
-| Up | ![Image 3](./data/raw/biograd-A/true_positives/raw/biograd-A_00235_left.jpg) | Down | ![Image 4](./data/raw/biograd-A/true_positives/raw/biograd-A_00311_left.jpg) |
-| Photo | ![Image 5](./data/raw/biograd-A/true_positives/raw/biograd-A_01200_left.jpg) | Backwards | ![Image 6](./data/raw//biograd-A/true_positives/raw/biograd-A_00404_left.jpg) |
-| Carry | ![Image 7](./data/raw/biograd-A/true_positives/raw/biograd-A_01022_left.jpg) | Boat | ![Image 8](./data/raw/biograd-A/true_positives/raw/biograd-A_01004_left.jpg) |
-| Here | ![Image 9](./data/raw/biograd-A/true_positives/raw/biograd-A_01039_left.jpg) | Mosaic | ![Image 10](./data/raw/biograd-A/true_positives/raw/biograd-A_00689_left.jpg) |
-| Num_delimiter | ![Image 11](./data/raw/biograd-A/true_positives/raw/biograd-A_00000_left.jpg) | One | ![Image 12](./data/raw/biograd-A/true_positives/raw/biograd-A_00039_left.jpg) |
-| Two | ![Image 13](./data/raw/biograd-A/true_positives/raw/biograd-A_00048_left.jpg) | Three | ![Image 14](./data/raw/biograd-A/true_positives/raw/biograd-A_00068_left.jpg) |
-| Four | ![Image 15](./data/raw/biograd-A/true_positives/raw/biograd-A_00086_left.jpg) | Five | ![Image 16](./data/raw/biograd-A/true_positives/raw/biograd-A_00006_left.jpg) |
+| Start_comm | ![Image 1](./data/raw/brodarski-C/true_positives/raw/brodarski-C_00637_left.jpg) | End_comm | ![Image 2](./data/raw/biograd-A/true_positives/raw/biograd-A_00571_left.jpg) |
+| Up | ![Image 3](./data/raw/genova-A/true_positives/raw/genova-A_02906_left.jpg) | Down | ![Image 4](./data/raw/genova-A/true_positives/raw/genova-A_01058_left.jpg) |
+| Photo | ![Image 5](./data/raw/genova-A/true_positives/raw/genova-A_01540_left.jpg) | Backwards | ![Image 6](./data/raw//biograd-C/true_positives/raw/biograd-C_01587_left.jpg) |
+| Carry | ![Image 7](./data/raw/genova-A/true_positives/raw/genova-A_01132_left.jpg) | Boat | ![Image 8](./data/raw/biograd-A/true_positives/raw/biograd-A_01004_left.jpg) |
+| Here | ![Image 9](./data/raw/brodarski-C/true_positives/raw/brodarski-C_00487_left.jpg) | Mosaic | ![Image 10](./data/raw/biograd-C/true_positives/raw/biograd-C_00820_left.jpg) |
+| Num_delimiter | ![Image 11](./data/raw/biograd-A/true_positives/raw/biograd-A_00564_left.jpg) | One | ![Image 12](./data/raw/biograd-B/true_positives/raw/biograd-B_00429_left.jpg) |
+| Two | ![Image 13](./data/raw/brodarski-D/true_positives/raw/brodarski-D_00087_left.jpg) | Three | ![Image 14](./data/raw/genova-A/true_positives/raw/genova-A_02156_left.jpg) |
+| Four | ![Image 15](./data/raw/biograd-C/true_positives/raw/biograd-C_00844_left.jpg) | Five | ![Image 16](./data/raw/biograd-A/true_positives/raw/biograd-A_00106_left.jpg) |
 </details>
 
 ## Ferramentas
-As principais ferramentas a serem utilizadas incluem Python, PyTorch, OpenCV para processamento de imagens, e possivelmente TensorFlow/Keras.
+-Linguagem de programação principal: Python 
+-Bibliotecas para pré-processamento de imagens: OpenCV, Pillow (PIL), Numpy
+-Bibliotecas para aumento de imagens: Torchvision
+-Bibliotecas para Deep Learning: Pytorch, TensorFlow/Keras (possivelmente)
+-Bibliotecas para avaliação dos modelos: Pytorch e Sklearn (métricas), Matplotlib (visualização)
 
 ## Principais desafios
-Os principais desafios incluem a variação das condições de iluminação subaquática, a qualidade das imagens e a precisão na detecção dos gestos em ambientes complexos. Além disso, as luvas Caddian, usadas nos testes do projeto CADDY, apresentam um design customizado com símbolos e cores para facilitar a detecção por Veículos Autônomos Subaquáticos (AUVs). Este design pode aumentar o risco de overfitting do modelo, limitando sua aplicabilidade em condições normais, sem luvas especiais. Será crucial avaliar a generalidade do modelo e explorar estratégias para adaptá-lo a um uso mais amplo, sem depender dessas características específicas das luvas.
+Os principais desafios incluem a variação das condições de iluminação subaquática, a qualidade das imagens e a precisão na detecção dos gestos em ambientes complexos. Além disso, as luvas Caddian, usadas nos testes do projeto CADDY, apresentam um design customizado com símbolos e cores para facilitar a detecção por Veículos Autônomos Subaquáticos (AUVs). Este design pode aumentar o risco de overfitting do modelo, limitando sua aplicabilidade em condições normais, sem luvas especiais. Será crucial avaliar a generalidade do modelo e explorar estratégias para adaptá-lo a um uso mais amplo, sem depender dessas características específicas das luvas. 
 
 ## Cronograma
 - Semanas 1-2: Revisão de literatura e definição das ferramentas.
