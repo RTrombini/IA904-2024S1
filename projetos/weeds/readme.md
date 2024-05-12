@@ -33,7 +33,12 @@ Base de Dados | Endereço na Web | Resumo descritivo
 > Principais desafios que se espera encontrar ao longo do desenvolvimento do projeto.
 
 ## Cronograma
-> Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
+
+> |Atividade  | Semana 1 | Semana 2| Semana 3| Semana 4| Semana 5| 
+> |--|--|--|--|--|--|
+> | Atividade 1 | X | | | | |
+> | Atividade 2 |   | X | | | |
+> | Atividade 3 |   | | | X | |
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
