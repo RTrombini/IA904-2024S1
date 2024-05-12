@@ -14,8 +14,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-> Descrição resumida do projeto.
-> Qual problema vocês pretendem solucionar?
+As ervas daninhas são uma das pragas agrícolas mais prejudiciais que tem um grande impacto sobre as plantações. As ervas daninhas são responsáveis pelo aumento dos custos de produção devido ao desperdício de culturas, o que tem um impacto significativo na economia agrícola global. Neste sentido, o objetivo geral deste projeto é detectar ervas daninhas em lavouras utilizando imagens de campos de cultivo para auxiliar o engenheiro-agrônomo a tomar decisões quanto à aplicação adequada de herbicidas, eliminando a necessidade de pulverização em massa, prática predominante na agricultura de grande escala, bem como reduzindo custos e tornando os produtos mais atrativos para os consumidores. 
 
 ## Metodologia
 > Proposta de metodologia informando quais técnicas pretende-se explorar, como por exemplo: aprendizado supervisionado, geração de dados sintéticos, clusterização, etc. Para a primeira entrega, descreva de maneira mais genérica que tipo de abordagem seu grupo pretende realizar.
