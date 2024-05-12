@@ -30,7 +30,7 @@ Assim, poderemos estudar os melhores modelos e ajustes de hiperparâmetros que e
 ## Bases de Dados e Evolução
 A base de dados que será utilizada será a [FairFace](https://github.com/joojs/fairface). Um conjunto de dados de atributos faciais para raças, gêneros e idades equilibrados. [1] Conhecida por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir
 
-![Gráfico](.\assets\grafico_dados.jpg)
+![Gráfico](./assets/grafico_dados.jpg)
 
 A base de dados possui dois conjunto separados, um composto para o treino, com 86744 imagens, e o outro composto para a validação, com 10954 imagens. Além do gráfico, podemos analisar os dados de balanceamento através da tabela a seguir, com a quantidade de imagens para cada etnia no conjunto de treino e validação.
 
@@ -51,15 +51,55 @@ Base de Dados | Endereço na Web | Resumo descritivo
 FairFace | https://github.com/dchen236/FairFace | Um conjunto de dados de atributos faciais para raças, gêneros e idades equilibrados. [1]
 
 ## Ferramentas
-> Ferramentas e/ou bibliotecas a serem utilizadas (com base na visão atual do grupo sobre o projeto).
 
+Serão apresentadas a seguir as ferramentas e bibliotecas a serem utilizadas durante o projeto.
+
+Biblioteca principal:
+- PyTorch
+
+Data-augmentation:
+- Random Rotation
+- Random Horizontal Flip
+- Random Vertical Flip
+- Random Resized Crop
+
+Modelos:
+- ImageNet
+- ResNet
+- Inception
+- VGG16 (Visual Geometry Group)
+- CNN (Convolutional Neural Network)
+
+Avaliação de modelos:
+- Weights & Biases
+
+Cálculo de métricas:
+- TorchEval
+
+Explicabilidade:
+- Grad-cam
+- Saliency Vanilla_gradient
 
 ## Principais desafios
-> Principais desafios que se espera encontrar ao longo do desenvolvimento do projeto.
+Durante o projeto, prevemos encontrar desafios significativos ao lidar com questões éticas. Como sabemos, há uma variedade de vertentes e discussões valiosas que exigirão estudo cuidadoso. O reconhecimento facial, estudado neste projeto, é muitas vezes considerado uma prática invasiva que pode colocar em risco indivíduos pertencentes a minorias em determinados países. Eles podem ser erroneamente identificados ou analisados como ameaças à segurança por modelos de reconhecimento facial. No entanto, compreender a injustiça e o preconceito presentes nessas situações é uma tarefa complexa. Um desafio adicional será entender o conceito de etnia, especialmente em uma cultura tão diversa e miscigenada como a nossa.
 
 ## Cronograma
-> Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
+Nesta seção será apresentado o cronograma do projeto.
+
+|Semana | Data | Atividade |
+|--|--|--|
+| Semana 1 | 28/04 à 04/05 | Definição do projeto |
+| Semana 2 | 05/05 à 11/05 | Documentação e planejamento do projeto |
+| Semana 3 | 12/05 à 18/05 | Aplicação do modelo ImageNet e ResNet |
+| Semana 4 | 19/05 à 25/05 | Aplicação do modelo Inception e VGG |
+| Semana 5 | 26/05 à 01/06 | Aplicação do modelo CNN |
+| Semana 6 | 02/06 à 08/06 | Comparação entre modelos e visualização de explicabilidade |
+| Semana 7 | 09/06 à 15/06 | Documentação e escrita das conclusões do projeto |
+| Semana 8 | 16/06 à 22/06 | Revisão e preparação da apresentação |
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
-[1] https://github.com/joojs/fairface
+
+[1] FairFace. 2021. "FairFace: Face Attribute Dataset for Balanced Race, Gender, and Age". https://github.com/joojs/fairface
+[2] Kärkkäinen, K., & Joo, J. (2019). FairFace: Face Attribute Dataset for Balanced Race, Gender, and Age. Recuperado de https://doi.org/10.48550/arXiv.1908.04913
+[3] Cavazos, J. G., Phillips, P. J., Castillo, C. D., & O’Toole, A. J. (2021). Accuracy Comparison Across Face Recognition Algorithms: Where Are We on Measuring Race Bias? IEEE Transactions on Biometrics, Behavior, and Identity Science, 3(1), 101–111. DOI: 10.1109/TBIOM.2020.3027269
+ 
