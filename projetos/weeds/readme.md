@@ -39,6 +39,10 @@ Base de Dados | Endereço na Web | Resumo descritivo
 > | Aquisição de dados | X | | | | |
 > | Pré-processamento |  X | X | | | |
 > | Modelo linha de base |   | X |  |  | |
+> | Apresentação de resultados preliminares |   |  | X |  | |
+> | Experimentação |   |  | X | X | X |
+> | Avaliação |   |  |  |  | X |
+> | Apresentação final |   |  |  |  | X |
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
