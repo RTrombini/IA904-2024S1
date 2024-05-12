@@ -1,5 +1,5 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in English>`
+# `Detecção de ervas daninhas usando visão computacional`
+# `Weed detection using computer vision`
 
 ## Apresentação
 
