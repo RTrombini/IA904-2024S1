@@ -83,7 +83,7 @@ Etapa|1|2|3|4|5|6|7|8|9
 4-Apresentação Preliminar||||||![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)
 5-Métricas e Baseline||||||![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)
 6-Refinamento|||||||![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)|![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)
-7-Documentação e Apresentação|||||||||![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)
+7-Documentação e Apresentação||||||||![](https://img.shields.io/badge/-a?style=for-the-badge&logoColor=green)|
 
 1. Geração de dados: geração de dados sintéticos utilizando a Unity.
 2. Modelo pré-treinado: busca e preparo do modelo pré-treinado que será utilizado.
