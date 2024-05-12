@@ -21,11 +21,10 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > Proposta de metodologia informando quais técnicas pretende-se explorar, como por exemplo: aprendizado supervisionado, geração de dados sintéticos, clusterização, etc. Para a primeira entrega, descreva de maneira mais genérica que tipo de abordagem seu grupo pretende realizar.
 
 ## Bases de Dados e Evolução
-> Elencar bases de dados candidatas a serem utilizadas no projeto.
 
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-Título da Base | http://base1.org/ | Breve resumo (duas ou três linhas) sobre a base.
+*Weeds Computer Vision Project* | https://universe.roboflow.com/augmented-startups/weeds-nxe1w | O conjunto de imagens de plantações com ervas daninhas pode facilmente confundir os modelos de detecção de objetos devido à semelhança das ervas daninhas em relação aos seus arredores. Esse conjunto contém 3664 imagens de treinamento (87%), 359 de validação (9%) e 180 imagens de teste (4%). As imagens estão disponíveis em formato JPEG, coloridas e com resolução de 416x416 píxeis.
 
 ## Ferramentas
 > Ferramentas e/ou bibliotecas a serem utilizadas (com base na visão atual do grupo sobre o projeto).
