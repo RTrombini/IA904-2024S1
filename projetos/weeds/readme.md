@@ -23,7 +23,7 @@ As ervas daninhas são uma das pragas agrícolas mais prejudiciais que tem um gr
 
 Base de Dados | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-*Weeds Computer Vision Project* | https://universe.roboflow.com/augmented-startups/weeds-nxe1w | O conjunto de imagens de plantações com ervas daninhas pode facilmente confundir os modelos de detecção de objetos devido à semelhança das ervas daninhas em relação aos seus arredores. Esse conjunto contém 3664 imagens de treinamento (87%), 359 de validação (9%) e 180 imagens de teste (4%). As imagens estão disponíveis em formato JPEG, coloridas e com resolução de 416x416 píxeis.
+*Weeds Computer Vision Project* | https://universe.roboflow.com/augmented-startups/weeds-nxe1w | Um conjunto de imagens de plantações com ervas daninhas que pode facilmente confundir os modelos de detecção de objetos devido à semelhança das ervas daninhas em relação aos seus arredores. Esse conjunto contém 3664 imagens de treinamento (87%), 359 de validação (9%) e 180 imagens de teste (4%). As imagens estão disponíveis em formato JPEG, coloridas e com resolução de 416x416 píxeis.
 
 ## Ferramentas
 > Ferramentas e/ou bibliotecas a serem utilizadas (com base na visão atual do grupo sobre o projeto).
