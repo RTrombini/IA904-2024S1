@@ -9,7 +9,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Miguel Angelo Mena Póvoa | 016954  | Aluno especial|
-> | Erick Aparecido Escagion | 249095  | Graduação em xxx|
+> | Erick Aparecido Escagion | 249095  | Aluno de mestrado em Engenharia Elétrica na área de Engenharia de Computação|
 > | Víctor Manuel Villegas Salabarria  | 27259  | Aluno de mestrado em Engenharia Mecânica|
 
 
