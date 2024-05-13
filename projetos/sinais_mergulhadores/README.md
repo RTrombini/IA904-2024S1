@@ -9,7 +9,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Raphael Melloni Trombini  | 271322 | Aluno Especial|
-> | Ícaro Dias dos Santos   | 245542  | Mestrado em Engenharia Mecánica|
+> | Ícaro Dias dos Santos   | 245542  | Mestrado em Engenharia Mecânica|
 > | José Alfredo Zapana García  | 272291 | Mestrado em Engenharia Elétrica|
 
 ## Descrição do Projeto
