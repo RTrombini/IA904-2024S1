@@ -21,8 +21,8 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 ## Bases de Dados e Evolução
 
-> Base de Dados | Endereço na Web | Resumo descritivo
------ | ----- | -----
+> |Base de Dados | Endereço na Web | Resumo descritivo
+> |----- | ----- | -----
 > *Weeds Computer Vision Project* | https://universe.roboflow.com/augmented-startups/weeds-nxe1w | Um conjunto de imagens de plantações com ervas daninhas que pode facilmente confundir os modelos de detecção de objetos devido à semelhança das ervas daninhas em relação aos seus arredores [5]. Esse conjunto contém 3664 imagens de treinamento (87%), 359 de validação (9%) e 180 imagens de teste (4%). As imagens estão disponíveis em formato JPEG, coloridas e com resolução de 416x416 píxeis.
 
 ## Ferramentas
