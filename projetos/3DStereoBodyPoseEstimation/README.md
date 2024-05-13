@@ -1,7 +1,7 @@
 # `Estimação Estéreo de Pose Corporal 3D`
 # `3D Stereo Body Pose Estimation`
 
--[]Escrever com menos abstração. Para alguém do primeiro ano de graduação  
+
 
 ## Apresentação
 
@@ -15,8 +15,7 @@ Leonardo Rener de Oliveira|201270|Mestrado em Engenharia Elétrica - Área de Co
 
 
 ## Descrição do Projeto
-> Descrição resumida do projeto.
-> Qual problema vocês pretendem solucionar?
+
 
 Estimação de pose corporal é uma técnica amplamente utilizada em diversas indústrias como cinema e jogos, e se baseia na detecção de keypoints específicos no corpo de uma pessoa. Pode ser realizada desde utilizando equipamentos mais complexos e custosos como sistemas de mocap (motion capture), quanto por sensores mais simples como IMU (unidades de medição inercial), ou, utilizando IA (inteligência artificial), usando imagens de câmeras [1][2].
 
@@ -24,7 +23,6 @@ O objetivo deste projeto é estimar a posição corporal no espaço 3D de uma pe
 
 
 ## Metodologia
-> Proposta de metodologia informando quais técnicas pretende-se explorar, como por exemplo: aprendizado supervisionado, geração de dados sintéticos, clusterização, etc. Para a primeira entrega, descreva de maneira mais genérica que tipo de abordagem seu grupo pretende realizar.
 
 Nossa proposta é utilizar um modelo detector de keypoints 2D pronto e utilizá-lo como um extrator de features, removendo as últimas camadas, executando-o uma vez em cada entrada e concatenado as features obtidas, que serão usadas de entrada para uma rede treinável que deverá estimar as posições dos pontos no espaço 3D. O treino será realizado de forma supervisionada. Serão exploradas arquiteturas densas e CNNs.
 
@@ -33,7 +31,6 @@ A avaliação será quantitativa com os dados sintéticos, comparando a soluçã
 Também será realizada uma avaliação qualitativa do modelo com dados reais da câmera, procurando irregularidades visuais entre o movimento obtido e gravado.
 
 ## Bases de Dados e Evolução
-> Elencar bases de dados candidatas a serem utilizadas no projeto.
 
 Os dados serão sintetizados utilizando o motor de jogos Unity, que possui desenvolvido o pacote "Perception" para a geração de dados sintéticos [4]. Ela permitirá simular a configuração do dispositivo real e aplicando randomizações que julgarmos necessárias, tentando mitigar os efeitos da mudança do domínio virtual para real. Para a geração de "pessoas virtuais" utilizaremos o pacote "SyntheticHumans" [5].
 
@@ -53,18 +50,15 @@ Cada entrada no conjunto de dados será composto de três imagens, uma para cada
 Em adição a este conjunto, coletaremos também para avaliação um dataset de imagens reais não anotadas com a OAK-D, também com uma pessoa em cena em diferentes posições.
 
 ## Ferramentas
-> Ferramentas e/ou bibliotecas a serem utilizadas (com base na visão atual do grupo sobre o projeto).
 
 - ![Unity](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white) Unity para geração de dados sintéticos 
 - ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) PyTorch para treino de modelos.
 
 ## Principais desafios
-> Principais desafios que se espera encontrar ao longo do desenvolvimento do projeto.
 
 O maior problema a ser enfrentado será a transferência do modelo do domínio sintético para o real, o que poderá levar a necessidade iterativa de diversificação das imagens geradas. A avaliação do modelo no domínio real também será um desafio. Um terceiro problema será a arquitetura exata do modelo que iremos criar.
 
 ## Cronograma
-> Proposta de cronograma. Procure estimar quantas semanas serão gastas para cada etapa do projeto.
 
 O projeto está dividido em 7 etapas distribuídas nas 9 semanas da disciplina:
 
@@ -89,8 +83,6 @@ Etapa|1|2|3|4|5|6|7|8|9
 
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
-
 [1] Zheng, Ce, et al. "Deep learning-based human pose estimation: A survey." ACM Computing Surveys 56.1 (2023): 1-37.
 
 [2] Kumar, Pranjal, Siddhartha Chauhan, and Lalit Kumar Awasthi. "Human pose estimation using deep learning: review, methodologies, progress and future research directions." International Journal of Multimedia Information Retrieval 11.4 (2022): 489-521.
