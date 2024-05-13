@@ -34,10 +34,19 @@ Dataset pessoal de Juan | http://link.org/ | Acervo pessoal de iniciação cient
 
 ## Ferramentas
 
-
 ## Principais desafios
 O principal desafio do projeto está relacionado ao dataset, visto que ele é composto de diferentes estágios de maturação o que dificultaria um treinamento supervisionado e da mesma forma a generalização do modelo. Uma solução em mente é inserirmos mais conjunto de dados de speckle como forma de interferência porém tomando sempre cuidado com o desbalanço de classes.
 ## Cronograma
+Semana | Data | Objetivo
+----- | ----- | -----
+0 | 30/04 à 05/05 | Proposta de projeto e grupo
+1 | 07/05 à 13/05 | Planejamento detalhado do projeto
+2 | 14/05 à 20/05 | Criação do modelo base e testes iniciais
+3 | 21/05 à 27/05 | Experimentação com outros modelos e data augmentation
+4 | 28/05 à 03/06 | Preparação para entrega de resultados preliminares
+5 | 04/06 à 10/06 | Escolha de melhor modelo e testes de desempenho
+6 | 11/06 à 17/06 | Escolha de melhor modelo e testes de desempenho
+7 | 18/06 à 25/05 | Preparação das conclusões finais e entrega de projeto
 
 ## Referências
 J. F. Serighelli, E. Fujiwara and C. M. B. Cordeiro, "Quantitative Biospeckle Spectral and Angular Analysis of Tomatoes at Different Ripening Stages," 2023 International Conference on Optical MEMS and Nanophotonics (OMN) and SBFoton International Optics and Photonics Conference (SBFoton IOPC), Campinas, Brazil, 2023, pp. 1-2, doi: https://doi.org/10.1109/OMN/SBFotonIOPC58971.2023.10230977.
