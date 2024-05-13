@@ -15,7 +15,7 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 
 
 ## Descrição do Projeto
-O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu estágio de maturação utilizando uma rede neural convolucional. O biospeckle é uma ferramente de analíse óptica não destrutiva de materiais biológicos, quando o objeto é iluminado por um feixe de luz "espalhado por uma superfície com rugosidades da ordem do comprimento de onda incidente ocorre a formação de uma estrutura granular no espaço livre à qual é dado o nome de speckle"(Silva, E. R. da ., & Muramatsu, M., 2007, p 283–286).
+O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu estágio de maturação utilizando uma rede neural convolucional. O biospeckle é uma ferramenta de analíse óptica não destrutiva de materiais biológicos, quando o objeto é iluminado por um feixe de luz "espalhado por uma superfície com rugosidades da ordem do comprimento de onda incidente ocorre a formação de uma estrutura granular no espaço livre à qual é dado o nome de speckle"(Silva, E. R. da ., & Muramatsu, M., 2007, p 283–286).
 
 <figure>
     <img src="assets/images/biospeckle-diagram.png"
@@ -28,14 +28,30 @@ O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu e
 ## Bases de Dados e Evolução
 
 
-Base de Dados | Endereço na Web | Resumo descritivo
------ | ----- | -----
-Dataset pessoal de Juan | http://link.org/ | Acervo pessoal de iniciação científica realizada em 2023
+Base de Dados |  Resumo descritivo
+----- | -----
+Dataset pessoal de Juan | Acervo pessoal de iniciação científica realizada em 2023
+
+<figure>
+    <img src="assets/images/biospeckle-green.png"
+         alt="green, biospeckle">
+    <figcaption>Biospeckle com laser verde </figcaption>
+</figure>
+
+<figure>
+    <img src="assets/images/biospeckle-red.png"
+         alt="red, biospeckle">
+    <figcaption>Biospeckle com laser vermelho </figcaption>
+</figure>
 
 ## Ferramentas
+As principais ferramentas para este projeto serão:
+ * PyTorch
+ * Google Colab
 
+Como ferramentas auxiliares iremos 
 ## Principais desafios
-O principal desafio do projeto está relacionado ao dataset, visto que ele é composto de diferentes estágios de maturação o que dificultaria um treinamento supervisionado e da mesma forma a generalização do modelo. Uma solução em mente é inserirmos mais conjunto de dados de speckle como forma de interferência porém tomando sempre cuidado com o desbalanço de classes.
+O principal desafio do projeto está relacionado ao dataset, visto que ele é composto de diferentes estágios de maturação de um mesmo tomate o que dificultaria um treinamento supervisionado e da mesma forma a generalização do modelo. Uma solução em mente é inserirmos mais conjunto de dados de speckle como forma de interferência porém tomando sempre cuidado com o desbalanço de classes.
 ## Cronograma
 Semana | Data | Objetivo
 ----- | ----- | -----
