@@ -11,11 +11,11 @@ oferecida no primeiro semestre de 2024, na Unicamp, sob supervisão da Profa. Dr
 |--|--|--|
 |  Amauri Amilton Alves de Oliveira | 217136  | Doutorado em Tecnologia |
 | Chen Jiahao  | 195673  | Graduação em Engenharia Elétrica |
-| Juan  | 219148  | Mestrado em Engenharia Mecânica |
+| Juan Felipe Serighelli | 219148  | Mestrado em Engenharia Mecânica |
 
 
 ## Descrição do Projeto
-O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu estágio de maturação utilizando uma rede neural convolucional. O biospeckle é uma ferramenta de analíse óptica não destrutiva de materiais biológicos, quando o objeto é iluminado por um feixe de luz "espalhado por uma superfície com rugosidades da ordem do comprimento de onda incidente ocorre a formação de uma estrutura granular no espaço livre à qual é dado o nome de speckle"(Silva, E. R. da ., & Muramatsu, M., 2007, p 283–286).
+O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu estágio de maturação utilizando uma rede neural convolucional. O biospeckle é uma ferramenta de análise óptica não destrutiva de materiais biológicos, quando o objeto é iluminado por um feixe de luz "espalhado por uma superfície com rugosidades da ordem do comprimento de onda incidente ocorre a formação de uma estrutura granular no espaço livre à qual é dado o nome de speckle"(Silva, E. R. da ., & Muramatsu, M., 2007, p 283–286).
 
 <figure>
     <img src="assets/images/biospeckle-diagram.png"
@@ -24,7 +24,23 @@ O projeto consiste em analisar o biospeckle de um tomate para estimarmos o seu e
 </figure>
 
 ## Metodologia
+A principal metodologia a ser seguida será com base no artigo Deep Learning Enabled Laser Speckle Wavemeter with a High Dynamic Range.(R. K. Gupta, G. D. Bruce, S. J. Powis, K. Dholakia, 2020, 2000120), no qual foi realizado o treinamento de uma rede neural para classificação de speckles de diferentes comprimentos de onda com o objetivo de verificar a eficácia do uso de deep learning para identificação de padrões em medição via speckle.
 
+O artigo conclui que o uso de redes neurais são ideais para estas análises pois conseguem identificar e extrair detalhes relevantes presente nos dados uma vez que a tarefa mais difícil na medição por speckle não se trata de obter a medição mas sim analisá-la pois depende da interpretação e entendimento da variação dos padrões vistos no input. 
+
+Na publicação Quantitative Biospeckle Spectral and Angular Analysis of Tomatoes at Different Ripening Stages(J. F. Serighelli, E. Fujiwara and C. M. B. Cordeiro, 2023, pp. 1-2) o uso de Biospeckle se mostrou um novo método eficaz de avaliação de frutos pois não é destrutivo e é mais preciso sendo menos sujeito a uma mera análise por cor por ser capaz de quantificar a atividade biológica do fruto.
+
+Dito isso, podemos então reaproveitar a metodologia utilizada nos artigos anteriores desta vez ao invés de classificar comprimentos de onda, iremos classificar o dia de maturação de um tomate do momento da sua colheita até trigésimo dia de maturação utilizando o biospeckle do tomate e seus respectivos dias de maturação e uma rede neural treinada por deep learning para identificar os padrões correspondentes ao dia de maturação.
+
+Os modelos utilizados serão:
+ * Modelo base de 3 camadas convolucionais para comparação.
+ * Modelo proposto no artigo Deep Learning Enabled Laser Speckle Wavemeter with a High Dynamic Range.
+ * Modelo classico de CNN, VGG16
+
+Além disso, com base na publicação no blog [Medium ](https://medium.com/@trapti.kalra/why-traditional-cnns-may-fail-for-texture-based-classification-3b49d6b94b6f) os modelos de CNNs mais tradicionais pecam em identificar texturas, portanto também será utilizado o modelo:
+ * FENet
+
+Assim como no artigo de R. K. Gupta, iremos avaliar os modelos com base na acurácia, F1-score e pela sua matriz de confusão.
 ## Bases de Dados e Evolução
 
 
@@ -49,9 +65,12 @@ As principais ferramentas para este projeto serão:
  * PyTorch
  * Google Colab
 
-Como ferramentas auxiliares iremos 
+
 ## Principais desafios
 O principal desafio do projeto está relacionado ao dataset, visto que ele é composto de diferentes estágios de maturação de um mesmo tomate o que dificultaria um treinamento supervisionado e da mesma forma a generalização do modelo. Uma solução em mente é inserirmos mais conjunto de dados de speckle como forma de interferência porém tomando sempre cuidado com o desbalanço de classes.
+
+Além disso como há falta de comparação entre modelos diferentes pela metodologia escolhida, outro desafio será o tempo disponível para treinar todos os modelos propostos neste projeto.
+
 ## Cronograma
 Semana | Data | Objetivo
 ----- | ----- | -----
@@ -70,3 +89,5 @@ J. F. Serighelli, E. Fujiwara and C. M. B. Cordeiro, "Quantitative Biospeckle Sp
 Silva, E. R. da ., & Muramatsu, M.. (2007). O fenômeno do speckle como introdução à metrologia óptica no laboratório didático. Revista Brasileira De Ensino De Física, 29(2), 283–286. https://doi.org/10.1590/S0102-47442007000200013
 
 R. K. Gupta, G. D. Bruce, S. J. Powis, K. Dholakia, Deep Learning Enabled Laser Speckle Wavemeter with a High Dynamic Range. Laser & Photonics Reviews 2020, 14, 2000120. https://doi.org/10.1002/lpor.202000120
+
+https://medium.com/@trapti.kalra/why-traditional-cnns-may-fail-for-texture-based-classification-3b49d6b94b6f
