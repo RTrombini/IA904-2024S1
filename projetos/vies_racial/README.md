@@ -14,26 +14,43 @@ Segue tabela com as informações dos alunos do projeto:
 | Sílvia Claudino Martins Gomes | 271629 | Aluna Especial |
 
 ## Descrição do Projeto
-O viés racial em modelos de reconhecimento facial é a tendência de desempenho desigual com base na raça das pessoas, devido a desequilíbrios nos dados de treinamento e padrões discriminatórios nos algoritmos. Identificar o viés envolve avaliar o desempenho em diferentes grupos raciais, analisar os conjuntos de dados e investigar os algoritmos.
+O viés racial em modelos de reconhecimento facial é a tendência de desempenho desigual com base na raça das pessoas, devido a desequilíbrios nos dados de treinamento e padrões discriminatórios nos algoritmos. Identificar o viés envolve avaliar o desempenho em diferentes grupos raciais, analisar os conjuntos de dados e investigar os algoritmos utilizados.
 
 O projeto visa compreender o viés racial em modelos amplamente reconhecidos na literatura. Para este estudo, será utilizada uma base de dados de imagens de rostos de pessoas de diversas etnias, denominada FairFace. Serão aplicados modelos de visão computacional populares na comunidade de processamento de imagens para serem comparados. Espera-se, ao final do projeto, compreender quais modelos apresentam melhor desempenho em relação ao viés racial.
 
-Para alcançar este objetivo de detecção de viés iremos seguir dois caminhos. 
-Primeiramente iremos analisar os embeddings das imagens utilizando ferramentas de redução de dimensionalidade como TNSE ou UMAP e, neste espaço reduzido, verificar como a rede separa diversas etnias. Além disso em caso deste teste não ser conclusivo iremos retreinar algumas das redes mais famosas de reconhecimento facial para reconhecer os rostos presentes nos datasets e analisar como elas se comportam no que tange viés. 
+Para alcançar este objetivo de detecção de viés iremos seguir dois caminhos:
+Primeiramente iremos analisar os embeddings das imagens utilizando ferramentas de redução de dimensionalidade como t-SNE (*t-distributed Stochastic Neighbor Embedding*) ou UMAP (*Uniform Manifold Approximation and Projection*) e, neste espaço reduzido, verificar como a rede separa diversas etnias. Além disso em caso deste teste não ser conclusivo iremos retreinar algumas das redes mais famosas de reconhecimento facial para reconhecer os rostos presentes nos datasets e analisar como elas se comportam no que tange viés. 
 
 ## Metodologia
 Nesta seção, será delineada a metodologia adotada para investigar o viés na distribuição dos embeddings das redes de imagens em relação à raça, utilizando técnicas de redução de dimensionalidade como t-Distributed Stochastic Neighbor Embedding (t-SNE) ou Uniform Manifold Approximation and Projection (UMAP). Além disso, caso essas análises não forneçam conclusões claras, planejamos retreinar algumas das redes mais renomadas de reconhecimento facial para avaliar seu desempenho em relação ao viés racial.
 
-No que diz respeito ao pré-processamento, prevemos realizar poucas ou nenhuma modificação nos dados, uma vez que nosso objetivo é analisar o comportamento dos modelos e identificar quais hiperparâmetros precisam ser ajustados para mitigar o viés racial em cada um deles. Também planejamos aumentar o conjunto de dados utilizando diversas técnicas de aumento de dados, garantindo o equilíbrio das etnias representadas no conjunto. Os três modelos de visão computacional populares na comunidade de processamento de imagens que serão testados são o FaceNet, VGGFace e MTCNN (Multi-Task Cascaded Convolutional Networks).
+No que diz respeito ao pré-processamento, prevemos realizar poucas ou nenhuma modificação nos dados, uma vez que nosso objetivo é analisar o comportamento dos modelos e identificar quais hiperparâmetros precisam ser ajustados para mitigar o viés racial em cada um deles. Também planejamos aumentar o conjunto de dados utilizando diversas técnicas de aumento de dados, garantindo o equilíbrio das etnias representadas no conjunto. Os três modelos de visão computacional populares na comunidade de processamento de imagens que serão testados são o FaceNet, VGGFace (*Visual Geometry Group Face*) e MTCNN (*Multi-Task Cascaded Convolutional Networks*).
 
 Esse enfoque permitirá a avaliação dos melhores modelos e ajustes de hiperparâmetros que possam mitigar o viés racial nos modelos. Por fim, pretendemos aplicar técnicas de interpretabilidade, como atribuição de saliência e mapas de ativação, para compreender quais características da imagem os modelos estão priorizando em suas decisões.
 
 ## Bases de Dados e Evolução
-A base de dados que será utilizada será a [FairFace](https://github.com/joojs/fairface). Um conjunto de dados de atributos faciais para raças, gêneros e idades equilibrados. [1] Conhecida por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir
+A base de dados que será utilizada será a [FairFace](https://github.com/joojs/fairface). Um conjunto de dados de atributos faciais para raças, gêneros e idades equilibrados. Durante este projeto, só serão utilizados os rótulos de raça. [1] Serão apresentados três exemplos de imagens presentes entre os dados e os respectivos rótulos:
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <div style="text-align: center;">
+    <img src="./data/raw/train/40864.jpg" alt="Imagem 1" width="300px" />
+    <p>Idade: 50-59 <br>Gênero: Male <br>Raça: Middle Eastern</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="./data/raw/train/86722.jpg" alt="Imagem 2" width="300px" />
+    <p>Idade: 0-2	<br>Gênero: Male	<br>Raça: Black</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="./data/raw/train/17.jpg" alt="Imagem 3" width="300px" />
+    <p>Idade: 20-29	<br>Gênero: Female	<br>Raça: Southeast Asian</p>
+  </div>
+</div>
+
+O conjunto é conhecida por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir
 
 ![Gráfico](./assets/grafico_dados.jpg)
 
-A base de dados possui dois conjunto separados, um composto para o treino, com 86744 imagens, e o outro composto para a validação, com 10954 imagens. Além do gráfico, podemos analisar os dados de balanceamento através da tabela a seguir, com a quantidade de imagens para cada etnia no conjunto de treino e validação.
+A base de dados possui dois conjuntos separados, um composto para o treino, com 86744 imagens, e o outro composto para a validação, com 10954 imagens. Além do gráfico, podemos analisar os dados de balanceamento através da tabela a seguir, com a quantidade de imagens para cada etnia no conjunto de treino e validação.
 
 |Etnia  | Treino | Validação |
 |--|--|--|
@@ -64,12 +81,9 @@ Data-augmentation:
 - Random Vertical Flip
 - Random Resized Crop
 
-Modelos:
-- ImageNet
-- ResNet
-- Inception
-- VGG16 (Visual Geometry Group)
-- CNN (Convolutional Neural Network)
+Redução de dimensionalidade:
+- t-Distributed Stochastic Neighbor Embedding (t-SNE) 
+- Uniform Manifold Approximation and Projection (UMAP)
 
 Avaliação de modelos:
 - Weights & Biases
@@ -91,9 +105,9 @@ Nesta seção será apresentado o cronograma do projeto.
 |--|--|--|
 | Semana 1 | 28/04 à 04/05 | Definição do projeto |
 | Semana 2 | 05/05 à 11/05 | Documentação e planejamento do projeto |
-| Semana 3 | 12/05 à 18/05 | Aplicação do modelo ImageNet e ResNet |
-| Semana 4 | 19/05 à 25/05 | Aplicação do modelo Inception e VGG |
-| Semana 5 | 26/05 à 01/06 | Aplicação do modelo CNN |
+| Semana 3 | 12/05 à 18/05 | Análise dos dados |
+| Semana 4 | 19/05 à 25/05 | Aplicação da técnica t-SNE |
+| Semana 5 | 26/05 à 01/06 | Aplicação da técnica UMAP |
 | Semana 6 | 02/06 à 08/06 | Comparação entre modelos e visualização de explicabilidade |
 | Semana 7 | 09/06 à 15/06 | Documentação e escrita das conclusões do projeto |
 | Semana 8 | 16/06 à 22/06 | Revisão e preparação da apresentação |
