@@ -45,7 +45,7 @@ A base de dados que será utilizada será a [FairFace](https://github.com/joojs/
   </div>
 </div>
 
-O conjunto é conhecida por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir
+O conjunto é conhecido por realizar um bom balanceamento entre as diversas etnias presentes no conjunto como é possível visualizar na imagem a seguir:
 
 ![Gráfico](./assets/grafico_dados.jpg)
 
