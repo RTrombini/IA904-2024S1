@@ -32,15 +32,15 @@ A base de dados que será utilizada será a [FairFace](https://github.com/joojs/
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <div style="text-align: center;">
-    <img src="./data/raw/train/40864.jpg" alt="Imagem 1" width="300px" />
+    <img src=./data/raw/train/40864.jpg alt="Imagem 1" width="300px" />
     <p>Idade: 50-59 <br>Gênero: Male <br>Raça: Middle Eastern</p>
   </div>
   <div style="text-align: center;">
-    <img src="./data/raw/train/86722.jpg" alt="Imagem 2" width="300px" />
+    <img src=./data/raw/train/86722.jpg alt="Imagem 2" width="300px" />
     <p>Idade: 0-2	<br>Gênero: Male	<br>Raça: Black</p>
   </div>
   <div style="text-align: center;">
-    <img src="./data/raw/train/17.jpg" alt="Imagem 3" width="300px" />
+    <img src=./data/raw/train/17.jpg alt="Imagem 3" width="300px" />
     <p>Idade: 20-29	<br>Gênero: Female	<br>Raça: Southeast Asian</p>
   </div>
 </div>
