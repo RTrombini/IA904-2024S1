@@ -80,6 +80,10 @@ Data-augmentation:
 - Random Vertical Flip
 - Random Resized Crop
 
+Modelos utilizados para geração dos embeddings:
+- FaceNet
+- VGGFace
+
 Redução de dimensionalidade:
 - t-Distributed Stochastic Neighbor Embedding (t-SNE) 
 - Uniform Manifold Approximation and Projection (UMAP)
