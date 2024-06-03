@@ -19,7 +19,7 @@ O objetivo deste projeto é desenvolver um sistema capaz de identificar e interp
 
 ## Metodologia
 
-Estamos considerando duas abordagens principais para o desenvolvimento do sistema: uma envolve a detecção de mãos seguida pela classificação dos gestos a partir das regiões de interesse (ROI) detectadas; a outra explora o uso de modelos de detecção e classificação integrados, como YOLO. A escolha final dependerá de análises de viabilidade, considerando as características do dataset disponível, que atualmente está no formato CSV, e a necessidade de eventualmente converter este dataset para um formato adequado como COCO para modelos como YOLO. Adicionalmente, consideraremos a necessidade de um pré-processamento das imagens para melhorar a visibilidade em condições subaquáticas desafiadoras, como baixo contraste, águas turvas e iluminação variada. Estamos abertos a explorar a abordagem que melhor se encaixe às necessidades e limitações do projeto.
+Estamos considerando duas abordagens principais para o desenvolvimento do sistema: uma envolve a detecção de mãos seguida pela classificação dos gestos a partir das regiões de interesse (ROI) detectadas; a outra explora o uso de modelos de detecção e classificação integrados, como YOLO. A escolha final dependerá de análises de viabilidade, considerando as características do dataset disponível, e a necessidade de eventualmente converter este dataset para um formato adequado como COCO para modelos como YOLO. Adicionalmente, consideraremos a necessidade de um pré-processamento das imagens para melhorar a visibilidade em condições subaquáticas desafiadoras, como baixo contraste, águas turvas e iluminação variada. Estamos abertos a explorar a abordagem que melhor se encaixe às necessidades e limitações do projeto pegando en conta que o modelo deveria ser embarcável no robô subaquático.
 
 ## Bases de Dados e Evolução
 
@@ -348,43 +348,49 @@ No caso das métricas de avaliação por segmentação:
 
 **Ação:** Retreinar o modelo utilizando imagens no formato de cor correto (RGB).  
 **Objetivo:** Garantir que o modelo opere corretamente no espectro de cores adequado, eliminando a distorção amarelada observada nas inferências.
+**Estimativa de tempo**: < 1 semana
 
 ### Aprimoramento do Dataset
 
 **Ação:** Aplicar técnicas de pré-processamento nas imagens para melhorar a qualidade visual, como ajuste de contraste e remoção de ruído.  
 **Objetivo:** Aumentar a precisão do modelo em condições subaquáticas adversas.
+**Estimativa de tempo**: 1 semana
 
 ### Revisão e Balanceamento do Dataset
 
 **Ação:** Revisar o dataset para garantir que todas as classes estejam bem representadas e balanceadas.  
 **Objetivo:** Evitar problemas de overfitting e underfitting, proporcionando um treinamento mais robusto.
+**Estimativa de tempo**: 1 semana
 
 ### Ajustes Finais no Modelo
 
 **Ação:** Experimentar com diferentes hiperparâmetros, como taxa de aprendizado, tamanho do lote e número de épocas.  
 **Objetivo:** Otimizar o desempenho do modelo YOLOv8 para a tarefa específica de detecção de gestos subaquáticos.
+**Estimativa de tempo**: 1.5 - 2 semanas
 
 ### Análise da Classe Mosaic
 
 **Ação:** Verificar se a ausência de detecções da classe mosaic no dataset de teste foi coincidência ou um problema do modelo.  
 **Objetivo:** Se necessário, ajustar o modelo e garantir a inclusão adequada de amostras da classe mosaic no dataset de treino e teste.
+**Estimativa de tempo**: 1 semana
 
 ### Separação entre Negative e Background
 
 **Ação:** Analisar se é mais vantajoso detectar a classe negative como background ou mantê-la como uma classe separada e ajustar o modelo conforme necessário.  
 **Objetivo:** Melhorar a precisão da detecção e a utilidade prática do modelo em cenários reais, decidindo a abordagem mais eficaz.
+**Estimativa de tempo**: < 1 semana
 
 ### Treinar uma rede com as imágens das luvas segmentadas
 
 **Ação:** Usar uma rede menor para reconhecer os gestos realizados pelos mergulhadores.
-
 **Objetivo:** Tentar ter um workflow com duas redes que possa diminuir o número de parâmetros treináveis.
+**Estimativa de tempo**: 1 semana
 
 ### Melhorar o desempenho da Shallow U-net
 
 **Ação:** Trocar os hiperparâmetros do treinamento da rede, aumentar a sua profundidade e o número de filtros.
-
 **Objetivo:** Incrementar o desempenho para reduzir o número de falsos positivos e melhorar a qualidade das máscaras geradas.
+**Estimativa de tempo**: 1 semana
 
 ## Referências
 - Gomez Chavez, A.; Ranieri, A.; Chiarella, D.; et al. CADDY Underwater Stereo-Vision Dataset for Human–Robot Interaction (HRI) in the Context of Diver Activities. J. Mar. Sci. Eng. 2019, 7, 16.
