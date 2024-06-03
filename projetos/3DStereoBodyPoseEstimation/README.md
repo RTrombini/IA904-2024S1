@@ -19,7 +19,9 @@ Leonardo Rener de Oliveira|201270|Mestrado em Engenharia Elétrica - Área de Co
 
 Estimação de pose corporal é uma técnica amplamente utilizada em diversas indústrias como cinema e jogos, e se baseia na detecção de keypoints específicos no corpo de uma pessoa. Pode ser realizada desde utilizando equipamentos mais complexos e custosos como sistemas de mocap (motion capture), quanto por sensores mais simples como IMU (unidades de medição inercial), ou, utilizando IA (inteligência artificial), usando imagens de câmeras [1][2].
 
-O objetivo deste projeto é estimar a posição corporal no espaço 3D de uma pessoa, utilizando uma câmera estéreo (dipositivo com várias câmeras). Mais especificamente, este projeto utilizará uma "OAK-D", dipositivo desenvolvido para aplicações de visão computacional que possui três câmeras, duas laterais monocromáticas, global shutter e 720p; e uma central colorida, rolling shutter e 4K. A câmera se comunica com o computador através de um cabo USB-C, e também possui integrado processadores para execução de pipelines de processamento visual e IA [3].
+Mais especificamente, dentro do contexto universitário, é comum a necessidade de coletas simples de poses corporais, seja para testar e validar ideias em projetos de pesquisa, seja para realização de projetos de disciplina. Este tipo de demanda se beneficiaria de um método de coleta rápido e com pouca preparação, não necessitando de uma precisão tão grande quanto sistemas de mocap, como coleta a partir de imagens.
+
+O objetivo deste projeto é então estimar a posição corporal no espaço 3D de uma pessoa, utilizando uma câmera estéreo (dipositivo com várias câmeras). Mais especificamente, este projeto utilizará uma "OAK-D", dipositivo desenvolvido para aplicações de visão computacional que possui três câmeras, duas laterais monocromáticas, global shutter e 720p; e uma central colorida, rolling shutter e 4K. A câmera se comunica com o computador através de um cabo USB-C, e também possui integrado processadores para execução de pipelines de processamento visual e IA [3].
 
 
 ## Metodologia
@@ -31,7 +33,7 @@ A avaliação será quantitativa com os dados sintéticos, comparando a soluçã
 Arquitetura proposta:
 ![Arquitetura](assets/Arquitetura.svg)
 
-Também será realizada uma avaliação qualitativa do modelo com dados reais da câmera, procurando irregularidades visuais entre o movimento obtido e gravado.
+Também será realizada uma avaliação qualitativa do modelo com dados reais da câmera, procurando irregularidades visuais entre a pose 3D obtida e o a pose visualizada na imagem.
 
 ## Bases de Dados e Evolução
 
@@ -53,7 +55,19 @@ São planejadas as randomizações:
     - Tamanho do sensor   
 
 
-Cada entrada no conjunto de dados será composto de três imagens, uma para cada câmera, com apenas uma pessoa em cena e keypoints no espaço 2D e 3D anotados para cada câmera. Outros metadados para análise poderão ser obtidos. Poderemos gerar quantos dados forem necessários, mas iremos começar gerando um dataset de por volta de 10000 entradas. As imagens serão salvas em formato PNG, enquanto que outros dados serão em arquivo JSON. 
+Cada entrada no conjunto de dados será composto de três imagens, uma para cada câmera, com apenas uma pessoa em cena e keypoints no espaço 2D e 3D anotados para cada câmera. Outros metadados para análise poderão ser obtidos. Poderemos gerar quantos dados forem necessários, mas iremos começar gerando um dataset de por volta de 6400 entradas. As imagens serão salvas em formato PNG, enquanto que outros dados serão em arquivo JSON. 
+
+O dataset é divivido nos seguintes conjuntos:
+
+Nome do conjunto | Nome explicativo | Tipo | Descrição
+-|-|-|-
+Scenario0|Fixed|Treino|Parâmetros da câmera fixos
+Scenario1|WeakNormal|Treino|Parâmetros da câmera com randomização aditiva fraca e normalmente variada
+Scenario2|StrongNormal|Treino|Parâmetros da câmera com randomização aditiva forte e normalmente variada
+Scenario3|StrongUniform|Teste|Parâmetros da câmera com randomização aditiva fraca e uniformemente variada
+Scenario4|Fixed-Test|Teste|Parâmetros da câmera fixos
+
+Uma descrição mais detalhada do protocolo de geração pode ser obtido em [OAK-D Synthetic Pose Dataset Generation Protocol](https://github.com/EltonCN/IA904-2024S1/blob/7b13886703576c74ecca8f1b1dd751d36a8c1896/projetos/3DStereoBodyPoseEstimation/data/OAK-D%20Synthetic%20Pose%20Dataset%20Generation%20Protocol.pdf).
 
 Em adição a este conjunto, coletaremos também para avaliação um dataset de imagens reais não anotadas com a OAK-D, também com uma pessoa em cena em diferentes posições.
 
