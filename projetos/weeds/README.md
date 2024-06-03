@@ -46,7 +46,7 @@ O cronogrma abaixo corresponde ao perído de 13/05/2024 a 23/06/2024 equivalente
 
 ## Workflow
 
-![Workflow](projetos/weeds/assets/wf.jpg)
+![Workflow](https://github.com/mapovoa/IA904-2024S1/blob/main/projetos/weeds/assets/wf.jpg)
 
 ## Experimentos e Resultados preliminares
 
