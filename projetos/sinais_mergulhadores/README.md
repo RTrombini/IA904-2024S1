@@ -125,7 +125,7 @@ Para utilizar o YOLOv8, o dataset precisava ser convertido para um formato compa
 - As imagens e anotações correspondentes foram movidas para diretórios específicos.
 
 ###### Diagrama de Fluxo para `dataset_converter.ipynb`:
-![Diagrama Dataset_converter](./projetos/sinais_mergulhadores/assets/worflows/dataset_converter.png)
+![Diagrama Dataset_converter](projetos/sinais_mergulhadores/assets/worflows/dataset_converter.png)
 
 #### 2. Estrutura do Dataset Final
 
