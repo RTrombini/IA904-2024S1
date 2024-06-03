@@ -186,12 +186,6 @@ Utilizou-se o modelo pré-treinado YOLOv8 nano (`yolov8n.pt`).
 
 Este fluxo de trabalho mostra como os três notebooks se conectam e interagem entre si no processo completo de detecção com YOLOv8.
 
-### Experimentos e Resultados Preliminares
-
-> Descreva de forma sucinta e organizada os experimentos realizados.
-> Para cada experimento, apresente os principais resultados obtidos.
-> Aponte os problemas encontrados nas soluções testadas até aqui.
-
 ## Experimentos e Resultados preliminares
 
 ### Experimento com YOLOv8
@@ -284,6 +278,69 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 - A susceptibilidade ao overfitting foi uma dificuldade encontrada, mesmo após a remoção das imagens duplicadas.
 - Aparentemente, todas as imagens da classe negative foram detectadas como background.
 
+### Segmentação com Shallow U-Net
+
+#### Preparação Do Dataset
+
+###### Divisão em Conjuntos de Treino, Validação e Teste:
+- Se selecionou 60% do dataset original para gerar um dataset de prova.
+- Esse dataset foi dividido em 65% para treino, 15% para validação e 20% para teste.
+- Se escolheu só usar as imágens da esquerda.
+
+#### Treinamento da Shallow U-Net
+
+##### Aumentação dos Dados
+As seguintes transformações são aplicadas aos dados de treinamento usando `transforms.Compose`:
+
+1. **RandomZoomOut**: Aplica um zoom out aleatório na imagem com uma probabilidade de 20%.
+2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 15 graus.
+3. **RandomHorizontalFlip**: Inverte a imagem horizontalmente com uma probabilidade de 50%.
+4. **GaussianBlur**: Aplica um desfoque gaussiano com um tamanho de kernel de 3x3.
+5. **RandomAdjustSharpness**: Ajusta a nitidez da imagem com um fator de nitidez de 1.25.
+
+##### Características de Treinamento
+
+- Batch size: 32
+- Tamanho das imágens: (162,212,3)
+- Número de classes: 2
+- Profundidade: 3
+- Filtros inicíais: 16
+- Modo: Concatenação
+- Épocas: 100
+- Learning rate: 0.0001
+
+#### Desempenho do Algoritmo
+
+A continuação se apresenta as curvas de perdas nos conjuntos de treinamento e validação.
+
+![Curva-perda](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curva_perda.png)
+
+No caso das métricas de avaliação por segmentação:
+- Pixel Accuracy: 72.69 %
+- IoU: 0.9
+
+<details>
+<summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
+
+![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_20.png)
+
+![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_80.png)
+
+![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_120.png)
+
+![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_1498.png)
+
+![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_1378.png)
+
+</details>
+
+#### Problemas encontrados 
+
+- A Shallow U-net aprendeu a reconhecer as luvas, mas isso gera falsos positivos.
+- Overfitting aparece pois o conjunto de dados de treinamento foi relativamente pequeno.
+- É necessário fazer um post-processamento das máscaras para filtrar características não desejáveis.
+- Seria necessário treinar uma rede mais para classificar os gestos.
+- 100 épocas não foi suficiente para que a rede complete seu aprendizado.
 
 ## Próximos passos
 
@@ -317,7 +374,17 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 **Ação:** Analisar se é mais vantajoso detectar a classe negative como background ou mantê-la como uma classe separada e ajustar o modelo conforme necessário.  
 **Objetivo:** Melhorar a precisão da detecção e a utilidade prática do modelo em cenários reais, decidindo a abordagem mais eficaz.
 
+### Treinar uma rede com as imágens das luvas segmentadas
 
+**Ação:** Usar uma rede menor para reconhecer os gestos realizados pelos mergulhadores.
+
+**Objetivo:** Tentar ter um workflow com duas redes que possa diminuir o número de parâmetros treináveis.
+
+### Melhorar o desempenho da Shallow U-net
+
+**Ação:** Trocar os hiperparâmetros do treinamento da rede, aumentar a sua profundidade e o número de filtros.
+
+**Objetivo:** Incrementar o desempenho para reduzir o número de falsos positivos e melhorar a qualidade das máscaras geradas.
 
 ## Referências
 - Gomez Chavez, A.; Ranieri, A.; Chiarella, D.; et al. CADDY Underwater Stereo-Vision Dataset for Human–Robot Interaction (HRI) in the Context of Diver Activities. J. Mar. Sci. Eng. 2019, 7, 16.
