@@ -286,7 +286,37 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 
 ## Próximos passos
-> Liste as próximas etapas planejadas para conclusão do projeto, com uma estimativa de tempo para cada etapa.
+
+### Correção do Formato de Cores
+
+**Ação:** Retreinar o modelo utilizando imagens no formato de cor correto (RGB).  
+**Objetivo:** Garantir que o modelo opere corretamente no espectro de cores adequado, eliminando a distorção amarelada observada nas inferências.
+
+### Aprimoramento do Dataset
+
+**Ação:** Aplicar técnicas de pré-processamento nas imagens para melhorar a qualidade visual, como ajuste de contraste e remoção de ruído.  
+**Objetivo:** Aumentar a precisão do modelo em condições subaquáticas adversas.
+
+### Revisão e Balanceamento do Dataset
+
+**Ação:** Revisar o dataset para garantir que todas as classes estejam bem representadas e balanceadas.  
+**Objetivo:** Evitar problemas de overfitting e underfitting, proporcionando um treinamento mais robusto.
+
+### Ajustes Finais no Modelo
+
+**Ação:** Experimentar com diferentes hiperparâmetros, como taxa de aprendizado, tamanho do lote e número de épocas.  
+**Objetivo:** Otimizar o desempenho do modelo YOLOv8 para a tarefa específica de detecção de gestos subaquáticos.
+
+### Análise da Classe Mosaic
+
+**Ação:** Verificar se a ausência de detecções da classe mosaic no dataset de teste foi coincidência ou um problema do modelo.  
+**Objetivo:** Se necessário, ajustar o modelo e garantir a inclusão adequada de amostras da classe mosaic no dataset de treino e teste.
+
+### Separação entre Negative e Background
+
+**Ação:** Analisar se é mais vantajoso detectar a classe negative como background ou mantê-la como uma classe separada e ajustar o modelo conforme necessário.  
+**Objetivo:** Melhorar a precisão da detecção e a utilidade prática do modelo em cenários reais, decidindo a abordagem mais eficaz.
+
 
 
 ## Referências
