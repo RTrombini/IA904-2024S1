@@ -26,7 +26,7 @@ O objetivo deste projeto é estimar a posição corporal no espaço 3D de uma pe
 
 Nossa proposta é utilizar um modelo detector de keypoints 2D pronto e utilizá-lo como um extrator de features, removendo as últimas camadas, executando-o uma vez em cada entrada e concatenado as features obtidas, que serão usadas de entrada para uma rede treinável que deverá estimar as posições dos pontos no espaço 3D. O treino será realizado de forma supervisionada. Serão exploradas arquiteturas densas e CNNs.
 
-A avaliação será quantitativa com os dados sintéticos, comparando a solução obtida com o ground truth e a triangularização. A avaliação será no espaço métrico 3D, visto que desejamos estimar de fato a posição absoluta de cada junta, e utilizando como métrica a soma do erro quadrático médio (MSE) de cada keypoint. Entre aspectos não determinados, keypoints não disponíveis em nenhuma das 3 imagens poderão ser mascarado; e como métrica alternativa pensamos em explorar o erro absoluto médio (MAM), para diminuir problemas com outliers. Para comparação, utilizaremos uma triangularização não-linear.
+A avaliação será quantitativa com os dados sintéticos, comparando a solução obtida com o ground truth e a triangularização. A avaliação será no espaço métrico 3D, visto que desejamos estimar de fato a posição absoluta de cada junta, e utilizando como métrica a soma do erro quadrático médio (MSE) de cada keypoint. Entre aspectos não determinados, keypoints não disponíveis em nenhuma das 3 imagens poderão ser mascarado; e como métrica alternativa pensamos em explorar o erro absoluto médio (MAE), para diminuir problemas com outliers. Para comparação, utilizaremos uma triangularização não-linear.
 
 Também será realizada uma avaliação qualitativa do modelo com dados reais da câmera, procurando irregularidades visuais entre o movimento obtido e gravado.
 
@@ -38,11 +38,11 @@ São planejadas as randomizações:
 - Geração procedural de "pessoas virtuais"
 - Pose da ‘pessoa virtual’
 - Ruído aditivo na pose dos sensores
-- Motion blur
 - Texturas de fundo
-- Oclusão 
 - Luz
-- Parâmetros intrínsecos das câmeras (foco)
+- Parâmetros intrínsecos das câmeras
+    - Foco
+    - Tamanho do sensor   
 
 
 Cada entrada no conjunto de dados será composto de três imagens, uma para cada câmera, com apenas uma pessoa em cena e keypoints no espaço 2D e 3D anotados para cada câmera. Outros metadados para análise poderão ser obtidos. Poderemos gerar quantos dados forem necessários, mas iremos começar gerando um dataset de por volta de 10000 entradas. As imagens serão salvas em formato PNG, enquanto que outros dados serão em arquivo JSON. 
@@ -80,7 +80,26 @@ Etapa|1|2|3|4|5|6|7|8|9
 6. Refinamento: refinamento do modelo e dados.
 7. Documentação e apresentação: documentação do projeto e preparação da apresentação para a disciplina.
 
+## Workflow
+- Dataset
+![Workflow de geração de dados](assets/Pipeline-Dataset_sintético.png)
+- Treino
+![Workflow de treinamento](assets/Pipeline-Treino.png)
 
+## Experimentos e Resultados preliminares
+- Geração de dados sintéticos
+> Criação do programa na engine Unity, para geração das imagens configuradas para a câmera OAK-D. Definidos parâmetros dos randomizadores fixos (objetos, pessoas, poses) e parâmetros variáveis (câmeras).
+![Protocolo de randomização](assets/protocolo_de_randomizacao.png)
+- Criação do Dataset
+> Geração do conjunto de dados, onde cada instancia é composta por 3 imagens, uma para cada câmera do OAK-D e por uma arquivo no formato json contendo os parâmetros intrínsecos das câmeras e os parâmetros do avatar humano.
+![Exemplo de imagem gerada](assets/exemplo_de_imagens.png)
+
+
+## Próximos passos
+1. Treinamento do modelo. Tempo estimado: 1 semana.
+2. Codificar baseline - Triangularização Não-linear. Tempo estimado: 3 dias
+3. Avaliação qualitativa. Tempo estimado: 2 dias
+4. Refinamento, levantamento de possíveis melhorias. Tempo estimado: 2 dias
 
 ## Referências
 [1] Zheng, Ce, et al. "Deep learning-based human pose estimation: A survey." ACM Computing Surveys 56.1 (2023): 1-37.
