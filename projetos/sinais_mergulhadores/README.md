@@ -125,7 +125,8 @@ Para utilizar o YOLOv8, o dataset precisava ser convertido para um formato compa
 - As imagens e anotações correspondentes foram movidas para diretórios específicos.
 
 ###### Diagrama de Fluxo para `dataset_converter.ipynb`:
-![Diagrama Dataset_converter](projetos/sinais_mergulhadores/assets/worflows/dataset_converter.png)
+
+![dataset_converter](https://github.com/RTrombini/IA904-2024S1/assets/114251488/cc7c1d8c-361b-4658-be60-bcae8ca3f456)
 
 #### 2. Estrutura do Dataset Final
 
@@ -168,19 +169,19 @@ Utilizou-se o modelo pré-treinado YOLOv8 nano (`yolov8n.pt`).
 
 **Diagrama de Fluxo para `yolo_training.ipynb`:**
 
-![Diagrama YOLO train](./projetos/sinais_mergulhadores/assets/worflows/train.png)
+![train](https://github.com/RTrombini/IA904-2024S1/assets/114251488/73770e7c-df2e-42ed-ad79-981c90211541)
 
 ### 4. Realizar Inferência com o Modelo Treinado
 
 **Diagrama de Fluxo para `yolo_inference.ipynb`:**
 
-![Diagrama YOLO Inference](./projetos/sinais_mergulhadores/assets/worflows/inference.png)
+![inference](https://github.com/RTrombini/IA904-2024S1/assets/114251488/3517f803-35f6-4b87-8cfc-7fb5b21d28c6)
 
 ### Relação entre os Três Notebooks
 
 **Diagrama Geral de Relação entre os Três Notebooks:**
 
-![Diagrama Geral](./projetos/sinais_mergulhadores/assets/worflows/general.png)
+![general](https://github.com/RTrombini/IA904-2024S1/assets/114251488/55a00f0b-0506-4ec8-a7eb-49549c96aa27)
 
 Este fluxo de trabalho mostra como os três notebooks se conectam e interagem entre si no processo completo de detecção com YOLOv8.
 
@@ -216,12 +217,13 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 - Segue abaixo a matriz de confusão  com os valores absolutos da detecção no dataset de testes:
 
- ![matriz de confusão  com os valores absolutos](./projetos/sinais_mergulhadores/notebook/yolo_test/runs/detect/train/confusion_matrix.png)
+![confusion_matrix](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d86f3b33-a171-418c-a452-2c01fb2466da)
 
 - Segue abaixo a matriz de confusão  normalizada da detecção no dataset de testes:
 
- ![matriz de confusão  normalizada](./projetos/sinais_mergulhadores/notebook/yolo_test/runs/detect/train/confusion_matrix_normalized.png)
 
+
+![confusion_matrix_normalized](https://github.com/RTrombini/IA904-2024S1/assets/114251488/cad0fa07-aafa-4ec9-932e-da977fee5961)
 
 
 ##### Classes Corretamente Classificadas
