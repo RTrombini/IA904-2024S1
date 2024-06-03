@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2024-06-03T07:05:52.623Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="nzrx79WCoLoHDNYiVAgg" version="24.4.13" type="google">
+  <diagram name="Page-1" id="82e54ff1-d628-8f03-85c4-9753963a91cd">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4ec97bd9e5d20128-1" value="" style="line;strokeWidth=2;html=1;fillColor=none;fontSize=28;fontColor=#004D99;strokeColor=#004D99;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="2600" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-5" value="Stage 1" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5093750000000015;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="120" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-6" value="&lt;span&gt;Stage 3&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5093750000000015;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="573" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-7" value="&lt;span&gt;Stage 2&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.4178571428571445;flipV=1;verticalAlign=bottom;strokeColor=none;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="347" y="425" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-8" value="&lt;span&gt;Stage 4&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.4178571428571445;flipV=1;verticalAlign=bottom;strokeColor=none;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="800" y="425" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-9" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#61BAFF;fontSize=28;fontColor=#004D99;strokeWidth=3;strokeColor=#004D99;" vertex="1" parent="1">
+          <mxGeometry x="190" y="395" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-10" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#61BAFF;fontSize=28;fontColor=#004D99;strokeWidth=3;strokeColor=#004D99;" vertex="1" parent="1">
+          <mxGeometry x="417" y="395" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-11" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#61BAFF;fontSize=28;fontColor=#004D99;strokeWidth=3;strokeColor=#004D99;" vertex="1" parent="1">
+          <mxGeometry x="643" y="395" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-13" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#61BAFF;fontSize=28;fontColor=#004D99;strokeWidth=3;strokeColor=#004D99;" vertex="1" parent="1">
+          <mxGeometry x="870" y="395" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-14" value="&lt;h1&gt;Obtenção dos dados&lt;/h1&gt;&lt;div&gt;&lt;ol&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Vídeos de Biospeckle de tomates&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Biomarcador sendo a maturação&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Período de 30 dias, em 12 classes&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;3 tomates para cada dia&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;2 comprimentos de onda (laser) em cada tomate&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="93" y="430" width="215" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-16" value="&lt;h1&gt;Dataset&lt;/h1&gt;&lt;div&gt;Separação dos frames de cada vídeo&lt;br&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="319" y="250" width="215" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-17" value="&lt;h1&gt;Labeling&lt;/h1&gt;&lt;p&gt;Organizar o dataset em dias para classificação&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="430" width="215" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4ec97bd9e5d20128-18" value="&lt;h1&gt;Subset 1&lt;/h1&gt;&lt;div&gt;Versão reduzida do dataset com desbalanço para testes iniciais e divisão entre treino e validação.&lt;/div&gt;&lt;div&gt;Versão inicial com com divisão aleatória sem estratificação das classes&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="773" y="210" width="215" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-3" value="&lt;span&gt;Stage 5&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-4" value="&lt;h1&gt;Baseline&lt;/h1&gt;&lt;div&gt;Definição do modelo inicial.&lt;/div&gt;&lt;div&gt;Sem pré-processamento&lt;/div&gt;&lt;div&gt;Teste básico utilizando 3 épocas e batch size 10&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1002.5" y="425" width="215" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-5" value="&lt;span&gt;Stage 6&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.4178571428571445;flipV=1;verticalAlign=bottom;strokeColor=none;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="425" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-6" value="&lt;h1&gt;Reteste 1&lt;/h1&gt;&lt;div&gt;Retest modificando o subset&amp;nbsp; para divisão aleatória de forma estratificada.&lt;/div&gt;&lt;div&gt;Testes feitos em 3 épocas e 32 épocas, batch size 10 e 32.&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1462.5" y="430" width="215" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-7" value="&lt;span&gt;Stage 7&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-8" value="&lt;h1&gt;Pré-processamento&lt;/h1&gt;&lt;div&gt;Inclusão de pré-processamento, conversão para grayscale e balanceamento de classes&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1922.5" y="425" width="215" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-9" value="&lt;span&gt;Stage 8&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.4178571428571445;flipV=1;verticalAlign=bottom;strokeColor=none;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="430" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-10" value="&lt;h1&gt;Reteste 2&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Testes feitos em 3 épocas e 32 épocas, batch size 10 e 32.&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2150" y="265" width="215" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-11" value="&lt;span&gt;Stage 9&lt;/span&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-12" value="&lt;h1&gt;Análise de resultados&lt;/h1&gt;&lt;div&gt;Análise de resultados utilizando conjunto de teste, geração da matriz de confusão e análise de métricas&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1692.5" y="210" width="215" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-13" value="&lt;h1&gt;Teste inicial&lt;/h1&gt;&lt;div&gt;Teste inicial utilizando o subset 1, teste feito para 3 épocas e batch size 10&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1232.5" y="260" width="215" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-16" value="&lt;span&gt;Stage 10&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.4178571428571445;flipV=1;verticalAlign=bottom;strokeColor=none;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="2177.5" y="425" width="160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-17" value="&lt;span&gt;Stage 11&lt;/span&gt;" style="shape=offPageConnector;whiteSpace=wrap;html=1;fillColor=#0075E8;fontSize=15;fontColor=#FFFFFF;size=0.5;verticalAlign=top;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2410" y="340" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IKUz7RlDSmxJQfEeWfhl-18" value="&lt;h1&gt;Reteste 3&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Reteste utilizando o dataset completo&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;strokeColor=none;strokeWidth=3;fillColor=#E6E6E6;fontSize=13;fontColor=#000000;align=center;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="2380" y="425" width="215" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
