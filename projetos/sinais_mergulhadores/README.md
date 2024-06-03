@@ -264,14 +264,15 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 | Comando            | Exemplo               | Comando            | Exemplo               |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-| Start_comm | ![Image 1](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00286_right.jpg) | End_comm | ![Image 2](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00027_right.jpg) |
-| Up | ![Image 3](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00257_right.jpg) | Down | ![Image 4](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00339_right.jpg) |
-| Photo | ![Image 5](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/genova-A_01528_right.jpg) | Backwards | ![Image 6](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00409_right.jpg) |
-| Carry | ![Image 7](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/genova-A_01614_right.jpg) | Boat | ![Image 8](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-B_00605_right.jpg) |
-| Here | ![Image 9](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-B_00651_right.jpg) | Num_delimiter | ![Image 10](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00019_right.jpg) |
-| One | ![Image 11](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00041_right.jpg) | Two | ![Image 12](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00373_right.jpg) |
-| Three | ![Image 13](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00176_right.jpg) | Four | ![Image 14](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00088_right.jpg) |
-| Five | ![Image 15](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/biograd-A_00259_right.jpg) | Negative | ![Image 16](projetos/sinais_mergulhadores/notebook/yolo_test/inference_results/neg_biograd-C_00280_right.jpg) |
+| Start_comm | ![Image 1](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e3baf444-2248-4fd9-a685-0f0018646604) | End_comm | ![Image 2](https://github.com/RTrombini/IA904-2024S1/assets/114251488/92a3a846-bf6f-45bd-90ec-9bb845e7303c)
+| Up | ![Image 3](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e5fa9164-a62b-4943-88ca-97ba5a0d128e)| Down | ![Image 4](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b9bf5fd3-fca9-48ea-8d07-56c7d7625b36) |
+| Photo | ![Image 5](https://github.com/RTrombini/IA904-2024S1/assets/114251488/be407c4a-f562-459f-90a4-1c282be64c3e) | Backwards | ![Image 6]
+![biograd-A_00409_right](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d3db314e-8c55-4fe5-8def-ea1d64aa11ec)|| Carry | ![Image 7](https://github.com/RTrombini/IA904-2024S1/assets/114251488/88feb56e-8303-4f5f-a0e0-97aadcf2d816)| Boat | ![Image 8](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ecdd8bb3-418f-4fe6-91a1-28510a15b93e)|
+| Here | ![Image 9](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b0d8d429-0af2-4e1b-a841-04998398659b)| Num_delimiter | ![Image 10](https://github.com/RTrombini/IA904-2024S1/assets/114251488/6154ce84-c3bc-4276-a4cb-51e16169f317)|
+| One | ![Image 11](https://github.com/RTrombini/IA904-2024S1/assets/114251488/8e8c66a1-de9d-4035-9e93-9f5334c1203d)| | Two | ![Image 12](https://github.com/RTrombini/IA904-2024S1/assets/114251488/578c3f88-e4aa-44dc-b1f3-f354cd210616) |
+| Three | ![Image 13](https://github.com/RTrombini/IA904-2024S1/assets/114251488/90468027-68cc-45b9-8cdc-ff050c44f061)| Four | ![Image 14](https://github.com/RTrombini/IA904-2024S1/assets/114251488/395fc8ef-3304-495e-82a8-8e8702ac7e18)|
+| Five | ![Image 15](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ae38eb6f-331f-4e68-ae99-bc9a9866d01c)
+| Negative | ![Image 16](https://github.com/RTrombini/IA904-2024S1/assets/114251488/9553fb1e-c831-4399-9740-7f6c0991d2f8)|
 </details>
 
 
