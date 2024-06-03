@@ -58,20 +58,21 @@ A distribuição do conjunto de dados é a seguinte:
 | Five           | 15           | 48                  |
 
 <details>
-<summary>Exemplos de gestos</summary>
+<summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
 
 | Comando    | Exemplo                                                        | Comando     | Exemplo                                                        |
 |------------|-----------------------------------------------------------------|-------------|----------------------------------------------------------------|
-| Start_comm | ![Image 1](./data/raw/brodarski-C/true_positives/raw/brodarski-C_00637_left.jpg) | End_comm   | ![Image 2](./data/raw/biograd-A/true_positives/raw/biograd-A_00571_left.jpg) |
-| Up         | ![Image 3](./data/raw/genova-A/true_positives/raw/genova-A_02906_left.jpg)     | Down       | ![Image 4](./data/raw/genova-A/true_positives/raw/genova-A_01058_left.jpg)   |
-| Photo      | ![Image 5](./data/raw/genova-A/true_positives/raw/genova-A_01540_left.jpg)     | Backwards  | ![Image 6](./data/raw//biograd-C/true_positives/raw/biograd-C_01587_left.jpg)|
-| Carry      | ![Image 7](./data/raw/genova-A/true_positives/raw/genova-A_01132_left.jpg)     | Boat       | ![Image 8](./data/raw/biograd-A/true_positives/raw/biograd-A_01004_left.jpg) |
-| Here       | ![Image 9](./data/raw/brodarski-C/true_positives/raw/brodarski-C_00487_left.jpg) | Mosaic    | ![Image 10](./data/raw/biograd-C/true_positives/raw/biograd-C_00820_left.jpg)|
-| Num_delimiter | ![Image 11](./data/raw/biograd-A/true_positives/raw/biograd-A_00564_left.jpg)| One        | ![Image 12](./data/raw/biograd-B/true_positives/raw/biograd-B_00429_left.jpg)|
-| Two        | ![Image 13](./data/raw/brodarski-D/true_positives/raw/brodarski-D_00087_left.jpg) | Three    | ![Image 14](./data/raw/genova-A/true_positives/raw/genova-A_02156_left.jpg)  |
-| Four       | ![Image 15](./data/raw/biograd-C/true_positives/raw/biograd-C_00844_left.jpg)    | Five     | ![Image 16](./data/raw/biograd-A/true_positives/raw/biograd-A_00106_left.jpg)|
+| Start_comm | ![Image 1](https://github.com/RTrombini/IA904-2024S1/assets/114251488/63cb1e3e-c998-46da-9484-ba1113b858d9) | End_comm   | ![Image 2](https://github.com/RTrombini/IA904-2024S1/assets/114251488/c7a5043d-ce04-45c4-ac73-e42aeef2d768) |
+| Up         | ![Image 3](https://github.com/RTrombini/IA904-2024S1/assets/114251488/43571b44-7074-4fb7-b297-711dce567490) | Down       | ![Image 4](https://github.com/RTrombini/IA904-2024S1/assets/114251488/f5f0f983-d4b3-4fc7-aa8a-2fea37aea9ea) |
+| Photo      | ![Image 5](https://github.com/RTrombini/IA904-2024S1/assets/114251488/a1bec6b3-8835-4b3a-9e5b-62013569f704) | Backwards  | ![Image 6](https://github.com/RTrombini/IA904-2024S1/assets/114251488/f56b2498-95f5-4f76-9683-a3a8859f0e2b) |
+| Carry      | ![Image 7](https://github.com/RTrombini/IA904-2024S1/assets/114251488/16bf799f-3a2d-4818-927e-7c498dd98068) | Boat       | ![Image 8](https://github.com/RTrombini/IA904-2024S1/assets/114251488/8d63032f-3b46-4b97-9e64-5f6b7159e666) |
+| Here       | ![Image 9](https://github.com/RTrombini/IA904-2024S1/assets/114251488/42423ef1-88d0-4c36-af07-e3bdc64e8bdd) | Num_delimiter | ![Image 10](https://github.com/RTrombini/IA904-2024S1/assets/114251488/a36ced6b-ada7-4fc1-ba31-3f0f1224f334) |
+| One        | ![Image 11](https://github.com/RTrombini/IA904-2024S1/assets/114251488/5607f938-dbc3-461f-96dc-6d7dd9e3d65b) | Two        | ![Image 12](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b27d0738-14b2-4986-8600-9cba39e58588) |
+| Three      | ![Image 13](https://github.com/RTrombini/IA904-2024S1/assets/114251488/f48fe56a-05d5-44c9-8c00-f1dfe7e7ee3d) | Four       | ![Image 14](https://github.com/RTrombini/IA904-2024S1/assets/114251488/3f394f60-9fb5-4994-bdf5-78e773c5f25f) |
+| Five       | ![Image 15](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d745bccd-2110-479c-b675-e4d53a7554e4) |
 
 </details>
+
 
 ## Ferramentas
 
@@ -262,16 +263,17 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
 
-| Comando            | Exemplo               | Comando            | Exemplo               |
-|-------------------------|-------------------------|-------------------------|-------------------------|
-| Start_comm | ![Image 1](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e3baf444-2248-4fd9-a685-0f0018646604) | End_comm | ![Image 2](https://github.com/RTrombini/IA904-2024S1/assets/114251488/92a3a846-bf6f-45bd-90ec-9bb845e7303c)
-| Up | ![Image 3](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e5fa9164-a62b-4943-88ca-97ba5a0d128e)| Down | ![Image 4](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b9bf5fd3-fca9-48ea-8d07-56c7d7625b36) |
-| Photo | ![Image 5](https://github.com/RTrombini/IA904-2024S1/assets/114251488/be407c4a-f562-459f-90a4-1c282be64c3e) | Backwards | ![Image 6](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d3db314e-8c55-4fe5-8def-ea1d64aa11ec)|| Carry | ![Image 7](https://github.com/RTrombini/IA904-2024S1/assets/114251488/88feb56e-8303-4f5f-a0e0-97aadcf2d816)| Boat | ![Image 8](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ecdd8bb3-418f-4fe6-91a1-28510a15b93e)|
-| Here | ![Image 9](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b0d8d429-0af2-4e1b-a841-04998398659b)| Num_delimiter | ![Image 10](https://github.com/RTrombini/IA904-2024S1/assets/114251488/6154ce84-c3bc-4276-a4cb-51e16169f317)|
-| One | ![Image 11](https://github.com/RTrombini/IA904-2024S1/assets/114251488/8e8c66a1-de9d-4035-9e93-9f5334c1203d)| Two | ![Image 12](https://github.com/RTrombini/IA904-2024S1/assets/114251488/578c3f88-e4aa-44dc-b1f3-f354cd210616) |
-| Three | ![Image 13](https://github.com/RTrombini/IA904-2024S1/assets/114251488/90468027-68cc-45b9-8cdc-ff050c44f061)| Four | ![Image 14](https://github.com/RTrombini/IA904-2024S1/assets/114251488/395fc8ef-3304-495e-82a8-8e8702ac7e18)|
-| Five | ![Image 15](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ae38eb6f-331f-4e68-ae99-bc9a9866d01c)|
-| Negative | ![Image 16](https://github.com/RTrombini/IA904-2024S1/assets/114251488/9553fb1e-c831-4399-9740-7f6c0991d2f8)|
+| Comando            | Exemplo                                                        | Comando            | Exemplo                                                        |
+|--------------------|-----------------------------------------------------------------|--------------------|----------------------------------------------------------------|
+| Start_comm         | ![Image 1](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e3baf444-2248-4fd9-a685-0f0018646604) | End_comm           | ![Image 2](https://github.com/RTrombini/IA904-2024S1/assets/114251488/92a3a846-bf6f-45bd-90ec-9bb845e7303c) |
+| Up                 | ![Image 3](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e5fa9164-a62b-4943-88ca-97ba5a0d128e) | Down               | ![Image 4](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b9bf5fd3-fca9-48ea-8d07-56c7d7625b36) |
+| Photo              | ![Image 5](https://github.com/RTrombini/IA904-2024S1/assets/114251488/be407c4a-f562-459f-90a4-1c282be64c3e) | Backwards          | ![Image 6](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d3db314e-8c55-4fe5-8def-ea1d64aa11ec) |
+| Carry              | ![Image 7](https://github.com/RTrombini/IA904-2024S1/assets/114251488/88feb56e-8303-4f5f-a0e0-97aadcf2d816) | Boat               | ![Image 8](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ecdd8bb3-418f-4fe6-91a1-28510a15b93e) |
+| Here               | ![Image 9](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b0d8d429-0af2-4e1b-a841-04998398659b) | Num_delimiter      | ![Image 10](https://github.com/RTrombini/IA904-2024S1/assets/114251488/6154ce84-c3bc-4276-a4cb-51e16169f317) |
+| One                | ![Image 11](https://github.com/RTrombini/IA904-2024S1/assets/114251488/8e8c66a1-de9d-4035-9e93-9f5334c1203d) | Two                | ![Image 12](https://github.com/RTrombini/IA904-2024S1/assets/114251488/578c3f88-e4aa-44dc-b1f3-f354cd210616) |
+| Three              | ![Image 13](https://github.com/RTrombini/IA904-2024S1/assets/114251488/90468027-68cc-45b9-8cdc-ff050c44f061) | Four               | ![Image 14](https://github.com/RTrombini/IA904-2024S1/assets/114251488/395fc8ef-3304-495e-82a8-8e8702ac7e18) |
+| Five               | ![Image 15](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ae38eb6f-331f-4e68-ae99-bc9a9866d01c) | Negative           | ![Image 16](https://github.com/RTrombini/IA904-2024S1/assets/114251488/9553fb1e-c831-4399-9740-7f6c0991d2f8) |
+
 </details>
 
 
