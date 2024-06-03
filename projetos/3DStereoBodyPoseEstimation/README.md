@@ -28,9 +28,17 @@ Nossa proposta é utilizar um modelo detector de keypoints 2D pronto e utilizá-
 
 A avaliação será quantitativa com os dados sintéticos, comparando a solução obtida com o ground truth e a triangularização. A avaliação será no espaço métrico 3D, visto que desejamos estimar de fato a posição absoluta de cada junta, e utilizando como métrica a soma do erro quadrático médio (MSE) de cada keypoint. Entre aspectos não determinados, keypoints não disponíveis em nenhuma das 3 imagens poderão ser mascarado; e como métrica alternativa pensamos em explorar o erro absoluto médio (MAE), para diminuir problemas com outliers. Para comparação, utilizaremos uma triangularização não-linear.
 
+Arquitetura proposta:
+![Arquitetura](assets/Arquitetura.svg)
+
 Também será realizada uma avaliação qualitativa do modelo com dados reais da câmera, procurando irregularidades visuais entre o movimento obtido e gravado.
 
 ## Bases de Dados e Evolução
+
+Base de Dados | Endereço na Web | Resumo descritivo
+-|-|-
+OAK-D Synthetic Pose|Não publicado|Dataset de imagens sintéticas com avatares realizando diferentes poses. Sintetizado para simular a captura com uma OAK-D. Contém anotação de keypoints 2D e 3D.
+OAK-D Real Pose|Não criado|Dataset de imagens reais realizando diferentes poses. Capturado utilizando uma OAK-D. Sem anotação.
 
 Os dados serão sintetizados utilizando o motor de jogos Unity, que possui desenvolvido o pacote "Perception" para a geração de dados sintéticos [4]. Ela permitirá simular a configuração do dispositivo real e aplicando randomizações que julgarmos necessárias, tentando mitigar os efeitos da mudança do domínio virtual para real. Para a geração de "pessoas virtuais" utilizaremos o pacote "SyntheticHumans" [5].
 
@@ -81,19 +89,20 @@ Etapa|1|2|3|4|5|6|7|8|9
 7. Documentação e apresentação: documentação do projeto e preparação da apresentação para a disciplina.
 
 ## Workflow
-- Dataset
-![Workflow de geração de dados](assets/Pipeline-Dataset_sintético.png)
-- Treino
-![Workflow de treinamento](assets/Pipeline-Treino.png)
+- Geração de dados sintéticos
+![Workflow de geração de dados](assets/Pipeline-Geração.svg)
+- Treino do modelo
+![Workflow de treinamento](assets/Pipeline-Treino.svg)
+- Coleta de dados reais
+![Workflow de coleta](assets/Pipeline-Coleta.svg)
+- Avaliação
+![Workflow de avaliação](assets/Pipeline-Avaliação.svg)
 
 ## Experimentos e Resultados preliminares
-- Geração de dados sintéticos
-> Criação do programa na engine Unity, para geração das imagens configuradas para a câmera OAK-D. Definidos parâmetros dos randomizadores fixos (objetos, pessoas, poses) e parâmetros variáveis (câmeras).
-![Protocolo de randomização](assets/protocolo_de_randomizacao.png)
+- Gerador de dados sintéticos
+  - Criação do gerador na game engine Unity, para geração das imagens configuradas para a câmera OAK-D. Definidos parâmetros dos randomizadores fixos (objetos, pessoas, poses) e parâmetros variáveis (câmeras).
 - Criação do Dataset
-> Geração do conjunto de dados, onde cada instancia é composta por 3 imagens, uma para cada câmera do OAK-D e por uma arquivo no formato json contendo os parâmetros intrínsecos das câmeras e os parâmetros do avatar humano.
-![Exemplo de imagem gerada](assets/exemplo_de_imagens.png)
-
+  - Uso do gerador para criar um conjunto de dados inicial, onde cada instancia é composta por 3 imagens PNG, uma para cada câmera do OAK-D e por uma arquivo no formato JSON contendo os parâmetros intrínsecos das câmeras e os parâmetros do avatar humano. Uma amostra dos dados está disponível na pasta "Dataset".
 
 ## Próximos passos
 1. Treinamento do modelo. Tempo estimado: 1 semana.
