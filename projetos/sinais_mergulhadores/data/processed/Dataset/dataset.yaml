@@ -1,0 +1,25 @@
+
+path: c:\Users\rapha\OneDrive\Documentos\mestrado\projeto_de_visao_computacional\Project\Dataset  # caminho para o dataset
+train: images/train  # caminho para as imagens de treino
+val: images/val  # caminho para as imagens de validação
+test: images/test  # caminho para as imagens de teste
+
+# Classes
+names:
+  0: start_comm
+  1: end_comm
+  2: up
+  3: down
+  4: photo
+  5: backwards
+  6: carry
+  7: boat
+  8: here
+  9: mosaic
+  10: num_delimiter
+  11: one
+  12: two
+  13: three
+  14: four
+  15: five
+  16: negative
