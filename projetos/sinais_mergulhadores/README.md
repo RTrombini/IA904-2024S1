@@ -214,7 +214,15 @@ Utilizou-se o modelo pré-treinado YOLOv8 nano (`yolov8n.pt`).
 
 Este fluxo de trabalho mostra como os três notebooks se conectam e interagem entre si no processo completo de detecção com YOLOv8.
 
-## Experimentos e Resultados preliminares
+## Avaliação
+
+1. Problem fingerprinting
+
+2. Metric selection
+
+3. Metric application
+
+## Experimentos e Resultados
 
 ### Experimento com YOLOv8
 
@@ -298,19 +306,10 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 </details>
 
-## Avaliação
 
-1. Problem fingerprinting
+### Modelo SUN-CNN
 
-2. Metric selection
-
-3. Metric application
-
-## Experimentos e Resultados
-
-### Experimentos
-
-#### Modelo SUN-CNN
+#### Experimentos
 
 ##### Treinamento da Shallow U-net
 
@@ -368,9 +367,7 @@ As seguintes transformações foram aplicadas aos dados de treinamento usando `t
 - Learning rate inícial: 0.0005
 - Learning rate decay: 0.98, cada 5 épocas
 
-### Resultados
-
-#### Modelo SUN-CNN
+#### Resultados
 
 ##### Curvas de perdas e precisão
 
