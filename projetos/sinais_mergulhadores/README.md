@@ -270,44 +270,42 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 </details>
 
+###  Detecção com Modelo Shallow U-net + CNN
 
+Esse modelo contou com duas etapas, primeiro o treinamento de uma rede Shallow U-net para segmentar os gestos feitos pelos mergulhadores, usando só duas classes (negativo e positivo). Depois de avaliar que a segmentação é feita corretamente, se continuou com um segundo treinamento de outra rede com os outputs da Shallow U-net para classificar os gestos, nessa segunda etapa se usaram 17 classes (16 gestos na base de dados + classe negativa).
 
-#### Problemas Encontrados:
+#### Segmentação com Shallow U-Net
 
-- As imagens estavam no formato RGB, mas todo o treinamento foi feito com as imagens em BGR, resultando em inferências com cores distorcidas, deixando as imagens amareladas. É necessário retreinar o modelo corrigindo o dataset para o formato de cor correto.
-- A susceptibilidade ao overfitting foi uma dificuldade encontrada, mesmo após a remoção das imagens duplicadas.
-- Aparentemente, todas as imagens da classe negative foram detectadas como background.
-
-### Segmentação com Shallow U-Net
-
-#### Preparação Do Dataset
+##### Preparação Do Dataset
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
-- Se selecionou 60% do dataset original para gerar um dataset de prova.
-- Esse dataset foi dividido em 65% para treino, 15% para validação e 20% para teste.
+- Se selecionou 75% do dataset original para gerar um dataset de prova.
+- Se utilizou um seed 42 para fazer todo split (dataset não usado, train-test-val split).
+- Esse dataset reduzido foi dividido em 72% para treino, 10% para validação e 18% para teste.
 - Se escolheu só usar as imágens da esquerda.
 
-#### Treinamento da Shallow U-Net
+##### Treinamento da Shallow U-Net
 
-##### Aumentação dos Dados
+###### Aumentação dos Dados
 As seguintes transformações são aplicadas aos dados de treinamento usando `transforms.Compose`:
 
 1. **RandomZoomOut**: Aplica um zoom out aleatório na imagem com uma probabilidade de 20%.
-2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 15 graus.
+2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 20 graus.
 3. **RandomHorizontalFlip**: Inverte a imagem horizontalmente com uma probabilidade de 50%.
 4. **GaussianBlur**: Aplica um desfoque gaussiano com um tamanho de kernel de 3x3.
 5. **RandomAdjustSharpness**: Ajusta a nitidez da imagem com um fator de nitidez de 1.25.
+6. **Resize**: Finalmente todas as imagens foram reajustadas para ter o mesmo tamanho depois das transformações.
 
-##### Características de Treinamento
+###### Características de Treinamento
 
 - Batch size: 32
-- Tamanho das imágens: (162,212,3)
+- Tamanho das imagens: (162,212,3)
 - Número de classes: 2
 - Profundidade: 3
-- Filtros inicíais: 16
+- Filtros inicíais: 32
 - Modo: Concatenação
-- Épocas: 100
-- Learning rate: 0.0001
+- Épocas: 188
+- Learning rate: 0.00005
 
 #### Desempenho do Algoritmo
 
@@ -316,8 +314,8 @@ A continuação se apresenta as curvas de perdas nos conjuntos de treinamento e 
 ![Curva-perda](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curva_perda.png)
 
 No caso das métricas de avaliação por segmentação:
-- Pixel Accuracy: 72.69 %
-- IoU: 0.9
+- Pixel Accuracy: 85.4 %
+- IoU: 0.93
 
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
@@ -334,63 +332,73 @@ No caso das métricas de avaliação por segmentação:
 
 </details>
 
-#### Problemas encontrados 
+#### Classificação com rede CNN
 
-- A Shallow U-net aprendeu a reconhecer as luvas, mas isso gera falsos positivos.
-- Overfitting aparece pois o conjunto de dados de treinamento foi relativamente pequeno.
-- É necessário fazer um post-processamento das máscaras para filtrar características não desejáveis.
-- Seria necessário treinar uma rede mais para classificar os gestos.
-- 100 épocas não foi suficiente para que a rede complete seu aprendizado.
+##### Preparação Do Dataset
 
-## Próximos passos
+###### Divisão em Conjuntos de Treino, Validação e Teste:
+- Se utilizou todo o dataset.
+- Se utilizou um seed 42 para fazer todo split (train-test-val split).
+- Esse dataset reduzido foi dividido em 76.5% para treino, 10% para validação e 13.5% para teste.
+- Se escolheu só usar as imágens da esquerda.
 
-### Correção do Formato de Cores
+##### Treinamento da Rede CNN
 
-**Ação:** Retreinar o modelo utilizando imagens no formato de cor correto (RGB).  
-**Objetivo:** Garantir que o modelo opere corretamente no espectro de cores adequado, eliminando a distorção amarelada observada nas inferências.
-**Estimativa de tempo**: < 1 semana
+###### Aumentação dos Dados
+As seguintes transformações são aplicadas aos dados de treinamento usando `transforms.Compose`:
 
-### Aprimoramento do Dataset
+1. **RandomZoomOut**: Aplica um zoom out aleatório na imagem com uma probabilidade de 20%.
+2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 20 graus.
+3. **RandomHorizontalFlip**: Inverte a imagem horizontalmente com uma probabilidade de 50%.
+4. **GaussianBlur**: Aplica um desfoque gaussiano com um tamanho de kernel de 3x3.
+5. **RandomAdjustSharpness**: Ajusta a nitidez da imagem com um fator de nitidez de 1.25.
+6. **Resize**: Finalmente todas as imagens foram reajustadas para ter o mesmo tamanho depois das transformações.
 
-**Ação:** Aplicar técnicas de pré-processamento nas imagens para melhorar a qualidade visual, como ajuste de contraste e remoção de ruído.  
-**Objetivo:** Aumentar a precisão do modelo em condições subaquáticas adversas.
-**Estimativa de tempo**: 1 semana
+###### Características de Treinamento
 
-### Revisão e Balanceamento do Dataset
+- Batch size: 32
+- Tamanho das imagens: (162,212,3)
+- Número de classes: 17
+- Épocas: 150
+- Learning rate inícial: 0.00005
+- Learning rate decay: 0.98, cada 5 épocas
 
-**Ação:** Revisar o dataset para garantir que todas as classes estejam bem representadas e balanceadas.  
-**Objetivo:** Evitar problemas de overfitting e underfitting, proporcionando um treinamento mais robusto.
-**Estimativa de tempo**: 1 semana
+## Avaliação
 
-### Ajustes Finais no Modelo
 
-**Ação:** Experimentar com diferentes hiperparâmetros, como taxa de aprendizado, tamanho do lote e número de épocas.  
-**Objetivo:** Otimizar o desempenho do modelo YOLOv8 para a tarefa específica de detecção de gestos subaquáticos.
-**Estimativa de tempo**: 1.5 - 2 semanas
+## Experimentos e Resultados
 
-### Análise da Classe Mosaic
+### Shallow U-net + CNN
 
-**Ação:** Verificar se a ausência de detecções da classe mosaic no dataset de teste foi coincidência ou um problema do modelo.  
-**Objetivo:** Se necessário, ajustar o modelo e garantir a inclusão adequada de amostras da classe mosaic no dataset de treino e teste.
-**Estimativa de tempo**: 1 semana
+#### Curvas de perdas e precisão
 
-### Separação entre Negative e Background
+Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram duas curvas de perdas
 
-**Ação:** Analisar se é mais vantajoso detectar a classe negative como background ou mantê-la como uma classe separada e ajustar o modelo conforme necessário.  
-**Objetivo:** Melhorar a precisão da detecção e a utilidade prática do modelo em cenários reais, decidindo a abordagem mais eficaz.
-**Estimativa de tempo**: < 1 semana
+![Curva de Perda UNet](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curva_perda_unet.png)
 
-### Treinar uma rede com as imágens das luvas segmentadas
+![Curves Classification Gestures](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curves_classification_gestures.png)
 
-**Ação:** Usar uma rede menor para reconhecer os gestos realizados pelos mergulhadores.
-**Objetivo:** Tentar ter um workflow com duas redes que possa diminuir o número de parâmetros treináveis.
-**Estimativa de tempo**: 1 semana
+#### Matriz de confusão
 
-### Melhorar o desempenho da Shallow U-net
+![Confusion Matrix](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/conf_matrix.png)
 
-**Ação:** Trocar os hiperparâmetros do treinamento da rede, aumentar a sua profundidade e o número de filtros.
-**Objetivo:** Incrementar o desempenho para reduzir o número de falsos positivos e melhorar a qualidade das máscaras geradas.
-**Estimativa de tempo**: 1 semana
+#### Relátorio de classificação
+
+![Classification Report](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/classification_report.png)
+
+#### Métricas de classificação globais
+
+- Matthews Correlation Coefficient: 0.94
+- Precisão: 0.95
+- Sensibilidade: 0.91
+- F1 score: 0.92 
+- Cohen Kappa score: 0.94
+
+## Discussão
+
+## Conclusão
+
+## Trabalhos futuros
 
 ## Referências
 - Gomez Chavez, A.; Ranieri, A.; Chiarella, D.; et al. CADDY Underwater Stereo-Vision Dataset for Human–Robot Interaction (HRI) in the Context of Diver Activities. J. Mar. Sci. Eng. 2019, 7, 16.
