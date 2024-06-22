@@ -74,14 +74,42 @@ A distribuição do conjunto de dados é a seguinte:
 </details>
 
 
-## Ferramentas
+## Ambiente computacional
 
-- Linguagem de programação principal: Python
+### Ambiente
+
+Python foi escolhido como linguagem de programação para treinar e avaliar os modelos, se utilizaram principalmente Jupyter Notebooks para permitir uma leitura fácil e reproducibilidade dos modelos.
+
+#### Ambiente para treinamento do modelo SUN-CNN
+A versão utilizada para o treinamento do modelo SUN-CNN foi Python 3.12.2.
+
+### Bibliotecas
+ 
 - Bibliotecas para pré-processamento de imagens: OpenCV, Pillow (PIL), Numpy
 - Bibliotecas para aumento de imagens: Torchvision
 - Bibliotecas para Deep Learning: PyTorch, YOLOv8
-- Biblioteca para manipulação de dados: pandas
-- Bibliotecas para avaliação dos modelos: PyTorch e Sklearn (métricas), Matplotlib (visualização)
+- Biblioteca para manipulação de dados: Pandas
+- Bibliotecas para obtenção de métricas: Pytorch e Sklearn
+- Bibliotecas para visualização de dados: Matplotlib e Seaborn
+
+#### Versões das bibliotecas usadas para o treinamento do modelo SUN-CNN
+- OpenCV 4.9.0
+- Pillow (PIL) 10.3.0
+- Numpy 1.26.4
+- Torchvision 0.17.1+cu118
+- CUDA toolkit 11.8
+- PyTorch 2.2.1+cu118
+- Pandas 2.2.1
+- Sklearn 1.4.1.post1
+- Matplotlib 3.8.3 
+- Seaborn 0.13.2
+
+### Recursos computacionais
+
+#### Treinamento do modelo SUN-CNN
+O treinamento foi realizado numa máquina local com uma gpu NVIDIA 2060 de 6 GB. 
+
+### Discussão e Dicas para implementação
 
 ## Workflow
 
@@ -270,24 +298,30 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 
 </details>
 
-###  Detecção com Modelo Shallow U-net + CNN
+## Avaliação
 
-Esse modelo contou com duas etapas, primeiro o treinamento de uma rede Shallow U-net para segmentar os gestos feitos pelos mergulhadores, usando só duas classes (negativo e positivo). Depois de avaliar que a segmentação é feita corretamente, se continuou com um segundo treinamento de outra rede com os outputs da Shallow U-net para classificar os gestos, nessa segunda etapa se usaram 17 classes (16 gestos na base de dados + classe negativa).
+1. Problem fingerprinting
 
-#### Segmentação com Shallow U-Net
+2. Metric selection
 
-##### Preparação Do Dataset
+3. Metric application
+
+## Experimentos e Resultados
+
+### Experimentos
+
+#### Modelo SUN-CNN
+
+##### Treinamento da Shallow U-net
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
-- Se selecionou 75% do dataset original para gerar um dataset de prova.
+- Se selecionou 75% do dataset original para gerar um dataset reduzido.
 - Se utilizou um seed 42 para fazer todo split (dataset não usado, train-test-val split).
 - Esse dataset reduzido foi dividido em 72% para treino, 10% para validação e 18% para teste.
-- Se escolheu só usar as imágens da esquerda.
+- Se escolheu só usar as imagens da esquerda.
 
-##### Treinamento da Shallow U-Net
-
-###### Aumentação dos Dados
-As seguintes transformações são aplicadas aos dados de treinamento usando `transforms.Compose`:
+###### Aumento dos Dados
+As seguintes transformações foram aplicadas aos dados de treinamento usando `transforms.Compose`:
 
 1. **RandomZoomOut**: Aplica um zoom out aleatório na imagem com uma probabilidade de 20%.
 2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 20 graus.
@@ -296,56 +330,27 @@ As seguintes transformações são aplicadas aos dados de treinamento usando `tr
 5. **RandomAdjustSharpness**: Ajusta a nitidez da imagem com um fator de nitidez de 1.25.
 6. **Resize**: Finalmente todas as imagens foram reajustadas para ter o mesmo tamanho depois das transformações.
 
-###### Características de Treinamento
+###### Hiperparâmetros
 
 - Batch size: 32
 - Tamanho das imagens: (162,212,3)
 - Número de classes: 2
-- Profundidade: 3
+- Profundidade da Unet: 3
 - Filtros inicíais: 32
 - Modo: Concatenação
 - Épocas: 188
 - Learning rate: 0.00005
 
-#### Desempenho do Algoritmo
-
-A continuação se apresenta as curvas de perdas nos conjuntos de treinamento e validação.
-
-![Curva-perda](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curva_perda.png)
-
-No caso das métricas de avaliação por segmentação:
-- Pixel Accuracy: 85.4 %
-- IoU: 0.93
-
-<details>
-<summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
-
-![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_20.png)
-
-![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_80.png)
-
-![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_120.png)
-
-![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_1498.png)
-
-![Example Results](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_1378.png)
-
-</details>
-
-#### Classificação com rede CNN
-
-##### Preparação Do Dataset
+##### Treinamento do modelo integrado SUN-CNN
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
 - Se utilizou todo o dataset.
-- Se utilizou um seed 42 para fazer todo split (train-test-val split).
-- Esse dataset reduzido foi dividido em 76.5% para treino, 10% para validação e 13.5% para teste.
-- Se escolheu só usar as imágens da esquerda.
+- Se utilizou um seed 42 para fazer todos os splits (train-test-val split).
+- Esse dataset foi dividido em 76.5% para treino, 10% para validação e 13.5% para teste.
+- Se escolheu só usar as imagens da esquerda.
 
-##### Treinamento da Rede CNN
-
-###### Aumentação dos Dados
-As seguintes transformações são aplicadas aos dados de treinamento usando `transforms.Compose`:
+###### Aumento dos Dados
+As seguintes transformações foram aplicadas aos dados de treinamento usando `transforms.Compose`:
 
 1. **RandomZoomOut**: Aplica um zoom out aleatório na imagem com uma probabilidade de 20%.
 2. **RandomRotation**: Rotaciona a imagem aleatoriamente dentro do intervalo de 0 a 20 graus.
@@ -354,23 +359,20 @@ As seguintes transformações são aplicadas aos dados de treinamento usando `tr
 5. **RandomAdjustSharpness**: Ajusta a nitidez da imagem com um fator de nitidez de 1.25.
 6. **Resize**: Finalmente todas as imagens foram reajustadas para ter o mesmo tamanho depois das transformações.
 
-###### Características de Treinamento
+###### Hiperparâmetros de treinamento
 
 - Batch size: 32
 - Tamanho das imagens: (162,212,3)
 - Número de classes: 17
 - Épocas: 150
-- Learning rate inícial: 0.00005
+- Learning rate inícial: 0.0005
 - Learning rate decay: 0.98, cada 5 épocas
 
-## Avaliação
+### Resultados
 
+#### Modelo SUN-CNN
 
-## Experimentos e Resultados
-
-### Shallow U-net + CNN
-
-#### Curvas de perdas e precisão
+##### Curvas de perdas e precisão
 
 Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram duas curvas de perdas
 
@@ -378,21 +380,32 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 
 ![Curves Classification Gestures](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/curves_classification_gestures.png)
 
-#### Matriz de confusão
+##### Matriz de confusão
 
 ![Confusion Matrix](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/conf_matrix.png)
 
-#### Relátorio de classificação
+##### Relátorio de classificação
 
 ![Classification Report](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/classification_report.png)
 
-#### Métricas de classificação globais
+##### Métricas de segmentação
 
-- Matthews Correlation Coefficient: 0.94
+- Intersection over Union (IoU): 0.90
+- Pixel accuracy: 0.82
+
+##### Métricas de classificação
+
 - Precisão: 0.95
 - Sensibilidade: 0.91
 - F1 score: 0.92 
 - Cohen Kappa score: 0.94
+- Matthews Correlation Coefficient: 0.94
+
+##### Número de parâmetros treináveis
+
+- Shallow U-net: 466,562
+- CNN: 596,561
+- Total: 1,063,123
 
 ## Discussão
 
