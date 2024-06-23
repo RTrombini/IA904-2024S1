@@ -390,6 +390,23 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 - Intersection over Union (IoU): 0.90
 - Pixel accuracy: 0.82
 
+<details>
+<summary title="Click to Expand/Collapse">Exemplos de gestos segmentados</summary>
+
+| Comando            | Exemplo                                                        | Comando            | Exemplo                                                        |
+|--------------------|-----------------------------------------------------------------|--------------------|----------------------------------------------------------------|
+| Start_comm         | ![Image 1](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class1.png) | End_comm           | ![Image 2](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class2.png) |
+| Up                 | ![Image 3](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class3.png) | Down               | ![Image 4](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class4.png) |
+| Photo              | ![Image 5](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class5.png) | Backwards          | ![Image 6](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class6.png) |
+| Carry              | ![Image 7](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class7.png) | Boat               | ![Image 8](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class8.png) |
+| Here               | ![Image 9](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class9.png) | Num_delimiter      | ![Image 10](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class10.png) |
+| One                | ![Image 11](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class11.png) | Two                | ![Image 12](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class12.png) |
+| Three              | ![Image 13](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class13.png) | Four               | ![Image 14](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class14.png) |
+| Five               | ![Image 15](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class15.png) | Negative           | ![Image 16](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class0.png) |
+
+</details>
+
+
 ##### Métricas de classificação
 
 - Precisão: 0.95
