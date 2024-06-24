@@ -491,6 +491,7 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 - Intersection over Union (IoU): 0.90
 - Pixel accuracy: 0.82
 
+
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos segmentados</summary>
 
@@ -504,7 +505,7 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 | Num_delimiter                | ![Image 11](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class11.png) | One                | ![Image 12](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class12.png) |
 | Two              | ![Image 13](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class13.png) | Three               | ![Image 14](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class14.png) |
 | Four               | ![Image 15](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class15.png) | Five           | ![Image 16](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class16.png) |
-| Negative | ![Image 17](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class0.png)   |  
+| Negative | ![Image 17](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class0.png)   |  | |
 </details>
 
 ##### Métricas de classificação
