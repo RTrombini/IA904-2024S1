@@ -122,7 +122,7 @@ A versão utilizada para o treinamento do modelo YOLO-v8 foi Python 3.11.9.
 ### Recursos computacionais
 
 #### Treinamento do modelo SUN-CNN
-O treinamento foi realizado numa máquina local com uma gpu NVIDIA 2060 de 6 GB. 
+O treinamento foi realizado numa máquina local com uma gpu NVIDIA 2060 de 6 GB de VRAM em um computador com um processador Ryzen 9 4900HS octacore e 16 GB de RAM para o sistema.
 
 #### Treinamento do modelo YOLO-v8
 O treinamento foi realizado numa máquina local com uma gpu NVIDIA 4070 de 12 GB de VRAM em um computador com um processador Ryzen 5 5600 hexacore e 32 GB de RAM para o sistema. 
@@ -490,6 +490,21 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 
 - Intersection over Union (IoU): 0.90
 - Pixel accuracy: 0.82
+
+<details>
+<summary title="Click to Expand/Collapse">Exemplos de gestos segmentados</summary>
+
+| Comando            | Exemplo                                                        | Comando            | Exemplo                                                        |
+|--------------------|-----------------------------------------------------------------|--------------------|----------------------------------------------------------------|
+| Start_comm         | ![Image 1](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class1.png) | End_comm           | ![Image 2](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class2.png) |
+| Up                 | ![Image 3](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class3.png) | Down               | ![Image 4](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class4.png) |
+| Photo              | ![Image 5](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class5.png) | Backwards          | ![Image 6](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class6.png) |
+| Carry              | ![Image 7](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class7.png) | Boat               | ![Image 8](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class8.png) |
+| Here               | ![Image 9](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class9.png) | Num_delimiter      | ![Image 10](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class10.png) |
+| One                | ![Image 11](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class11.png) | Two                | ![Image 12](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class12.png) |
+| Three              | ![Image 13](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class13.png) | Four               | ![Image 14](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class14.png) |
+| Five               | ![Image 15](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class15.png) | Negative           | ![Image 16](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class0.png) |
+
 
 ##### Métricas de classificação
 
