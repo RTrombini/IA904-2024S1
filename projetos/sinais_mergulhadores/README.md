@@ -493,6 +493,7 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 - Pixel accuracy: 0.82
 
 
+
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos segmentados</summary>
 
