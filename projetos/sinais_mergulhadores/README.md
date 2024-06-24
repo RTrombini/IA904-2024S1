@@ -402,7 +402,7 @@ As seguintes transformações foram aplicadas aos dados de treinamento utilizand
 
 **Resultados Obtidos:**
 - **Precisão (Precision):** 0.913
-- **Revocação (Recall):** 0.928
+- **Sensibilidade:** 0.928
 - **mAP50 (Mean Average Precision at IoU=0.50):** 0.932
 - **mAP50-95 (Mean Average Precision at IoU=0.50:0.95):** 0.693
 
