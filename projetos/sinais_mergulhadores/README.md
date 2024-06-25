@@ -167,6 +167,9 @@ O treinamento foi realizado numa máquina local com uma gpu NVIDIA 4070 de 12 GB
 
 ## Workflow
 
+![workflow](https://github.com/RTrombini/IA904-2024S1/assets/114251488/1e1072ea-542e-48bb-8f7e-04084ff1aff2)
+
+
 A continuação se apressenta o workflow seguido pelo grupo, onde primeiro foi feita uma exploração dos dados divulgados pelo grupo CADDY, a partir dos quais foram obtidos insights sobre as abordagens que se poderiam ser tomadas para resolver o problema, decidindo fazer uma comparação entre dois modelos de Deep Learning. Finalmente, depois de iterações e refinamentos dos modelos se realizou uma avaliação com um conjunto de teste específico para os dois modelos.
 
 ![workflow](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/workflow.png)
