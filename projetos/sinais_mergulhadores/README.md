@@ -19,7 +19,42 @@ O objetivo deste projeto é desenvolver um sistema capaz de identificar e interp
 
 ## Metodologia
 
-Estamos considerando duas abordagens principais para o desenvolvimento do sistema: uma envolve a detecção de mãos seguida pela classificação dos gestos a partir das regiões de interesse (ROI) detectadas; a outra explora o uso de modelos de detecção e classificação integrados, como YOLO. A escolha final dependerá de análises de viabilidade, considerando as características do dataset disponível, e a necessidade de eventualmente converter este dataset para um formato adequado como COCO para modelos como YOLO. Adicionalmente, consideraremos a necessidade de um pré-processamento das imagens para melhorar a visibilidade em condições subaquáticas desafiadoras, como baixo contraste, águas turvas e iluminação variada. Estamos abertos a explorar a abordagem que melhor se encaixe às necessidades e limitações do projeto pegando en conta que o modelo deveria ser embarcável no robô subaquático.
+O desenvolvimento do sistema de detecção e classificação de gestos subaquáticos foi conduzido através de duas abordagens principais: (1) uma abordagem baseada na detecção de mãos seguida pela classificação dos gestos a partir das regiões de interesse (ROI) detectadas e (2) uma abordagem que explora o uso de modelos de detecção e classificação integrados, especificamente o YOLOv8. Ambas as abordagens utilizaram o mesmo dataset de teste para garantir uma comparação justa dos resultados obtidos.
+
+### Detecção de Mãos e Classificação de Gestos
+
+**Descrição**: Nesta abordagem, inicialmente as mãos dos mergulhadores foram detectadas nas imagens utilizando uma arquitetura Shallow U-Net. As regiões de interesse (ROIs) contendo as mãos foram então extraídas e alimentadas em uma rede neural convolucional (CNN) para a classificação dos gestos.
+
+**Justificativa Teórica**: Esta abordagem foi escolhida com base na hipótese de que a detecção de uma única classe (mão) poderia ser mais robusta do que a detecção direta de múltiplas classes de gestos. Uma vez que as mãos são detectadas com precisão, a classificação dos gestos a partir das ROIs se torna um problema mais localizado e específico, potencialmente melhorando a precisão geral do sistema. A U-Net, conhecida por sua eficiência em segmentação de imagens, foi utilizada para garantir a detecção precisa das mãos, enquanto a CNN foi empregada para aproveitar sua eficácia em tarefas de classificação de imagens.
+
+**Viabilidade**: Utilizamos um dataset contendo imagens estéreo de mergulhadores realizando diversos gestos. A preparação do dataset envolveu a combinação de arquivos CSV de verdadeiros positivos e negativos, filtragem de imagens duplicadas e criação de arquivos de anotação para cada imagem. O dataset foi dividido em conjuntos de treino, validação e teste. A Shallow U-Net foi treinada para segmentar as mãos nas imagens, e a CNN foi treinada para classificar os gestos a partir das ROIs extraídas.
+
+**Ferramentas e Técnicas Utilizadas**:
+
+- **Shallow U-Net**: Utilizada para a segmentação das mãos.
+- **CNN**: Utilizada para a classificação das ROIs em gestos específicos.
+- **Frameworks**: TensorFlow e Keras foram utilizados para implementar e treinar os modelos.
+- **Pré-processamento de Imagens**: Técnicas de aumento de dados como rotação, espelhamento e ajuste de contraste foram aplicadas para melhorar a robustez do modelo.
+
+### Modelo Integrado de Detecção e Classificação (YOLOv8)
+
+**Descrição**: Utilizamos o modelo YOLOv8, um modelo de detecção de objetos que realiza simultaneamente a detecção e a classificação dos gestos subaquáticos em uma única etapa. O YOLOv8 nano foi escolhido devido ao seu tamanho reduzido e eficiência computacional, adequados para aplicações embarcadas.
+
+**Justificativa Teórica**: O YOLO (You Only Look Once) é uma família de modelos de detecção de objetos conhecida por sua capacidade de realizar detecção e classificação em tempo real com alta precisão. A versão YOLOv8 nano foi escolhida por equilibrar desempenho e eficiência computacional, sendo especialmente útil para aplicações onde os recursos de hardware são limitados, como em robôs subaquáticos.
+
+**Viabilidade**: O dataset foi convertido para um formato compatível com YOLO, o que incluiu a normalização das coordenadas de ROI e a criação de arquivos de anotação no formato YOLO. O modelo YOLOv8 nano foi então treinado utilizando este dataset, e sua performance foi avaliada em termos de precisão, recall e mAP (mean Average Precision).
+
+**Ferramentas e Técnicas Utilizadas**:
+
+- **YOLOv8 nano**: Utilizado para a detecção e classificação integrada de gestos.
+- **Frameworks**: PyTorch e a biblioteca Ultralytics YOLO foram utilizados para implementar e treinar o modelo.
+- **Conversão do Dataset**: Scripts personalizados foram desenvolvidos para converter o dataset original para o formato necessário pelo YOLOv8.
+- **Treinamento e Validação**: O modelo foi treinado utilizando GPUs para acelerar o processo, com avaliação contínua em um conjunto de validação para ajustar hiperparâmetros e prevenir overfitting.
+
+### Utilização do Mesmo Dataset de Teste
+
+Ambas as abordagens, Shallow U-Net + CNN e YOLOv8 nano, utilizaram o mesmo dataset de teste para garantir uma comparação justa e direta dos resultados obtidos. Este procedimento permitiu avaliar as performances relativas das duas abordagens em condições idênticas, facilitando a análise comparativa e a interpretação dos resultados.
+
 
 ## Bases de Dados e Evolução
 
