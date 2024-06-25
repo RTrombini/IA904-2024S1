@@ -294,7 +294,7 @@ Recomendações relacionadas à implementação e interpretação das métricas.
 
 ### Experimento com YOLOv8
 
-Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de detectar as mãos dos mergulhadores nas imagens subaquáticas. Para nossa surpresa, a detecção de mãos foi muito bem-sucedida, mesmo nas imagens mais turvas e com baixa visibilidade. Motivados por esses resultados positivos, prosseguimos com o treinamento do modelo para a detecção de gestos específicos, separados em 16 classes (15 classes de gestos e uma classe sem gestos).
+Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de detectar as mãos dos mergulhadores nas imagens subaquáticas. Para nossa surpresa, a detecção de mãos foi muito bem-sucedida, mesmo nas imagens mais turvas e com baixa visibilidade. Motivados por esses resultados positivos, prosseguimos com o treinamento do modelo para a detecção de gestos específicos, separados em 17 classes (16 classes de gestos e uma classe sem gestos).
 
 #### Preparação do Dataset:
 
@@ -415,6 +415,70 @@ Os resultados obtidos indicam um bom desempenho do modelo YOLOv8 na detecção e
 #### Experimentos
 
 Apartir dos resultados obtidos com a YOLO-v8 nano, apareceu a pergunta de se era possível obter resultados no mesmo nível com menos parâmetros treináveis, pegando en conta que a ideia do projeto é que o modelo seja embarcável num robô subaquático. Nesse sentido, o uso de uma rede de segmentação mais uma rede de classificação deveria realizar de maneira satisfátoria essa tarefa. Nós escolhimos uma variação da U-net original, chamada Shallow U-net, pois tem menos camadas de profundidade para o encoder-decoder, assim mesmo tem menos camadas de filtros, reduzindo o número de parâmetros desde o início. No caso da rede CNN, se armou uma estrutura com 4 camadas convolucionais com batch normalization e função de ativação ReLU para fazer a extracção de características das imagens filtradas pela Shallow U-net e umas camadas Fully connected com regularização Dropout para aumentar a sua generalização e fazer a classificação do gesto feito pelo mergulhador.
+
+Arquitetura da Shallow U-Net
+
+---------------------------------------------------------------------------------------
+Layer (type)                Output Shape              Param #   
+=======================================================================================
+Conv2d-1                    [-1, 32, 160, 212]        896       
+Conv2d-2                    [-1, 32, 160, 212]        9,248     
+MaxPool2d-3                 [-1, 32, 80, 106]         0         
+DownConv-4                  [[-1, 32, 80, 106], [-1, 32, 160, 212]] 18,496     
+Conv2d-5                    [-1, 64, 80, 106]         8,496     
+Conv2d-6                    [-1, 64, 80, 106]         36,928    
+MaxPool2d-7                 [-1, 64, 40, 53]          0         
+DownConv-8                  [[-1, 64, 40, 53], [-1, 64, 80, 106]] 73,856     
+Conv2d-9                    [-1, 128, 40, 53]         18,496     
+Conv2d-10                   [-1, 128, 40, 53]         147,584   
+DownConv-11                 [[-1, 128, 40, 53], [-1, 128, 40, 53]] 147,584   
+ConvTranspose2d-12          [-1, 64, 80, 106]         32,832    
+Conv2d-13                   [-1, 64, 80, 106]         73,792    
+Conv2d-14                   [-1, 64, 80, 106]         36,928    
+UpConv-15                   [-1, 64, 80, 106]         0         
+ConvTranspose2d-16          [-1, 32, 160, 212]        8,224     
+Conv2d-17                   [-1, 32, 160, 212]        18,464    
+Conv2d-18                   [-1, 32, 160, 212]        9,248     
+UpConv-19                   [-1, 32, 160, 212]        0         
+Conv2d-20                   [-1, 2, 160, 212]         66        
+=======================================================================================
+Total params: 466,562
+Trainable params: 466,562
+Non-trainable params: 0
+---------------------------------------------------------------------------------------
+
+
+Arquitetura da CNN
+
+---------------------------------------------------------------------------------------
+Layer (type)                Output Shape              Param #   
+=======================================================================================
+Conv2d-1                    [-1, 32, 160, 212]        896       
+BatchNorm2d-2               [-1, 32, 160, 212]        64        
+MaxPool2d-3                 [-1, 32, 80, 106]         0         
+Conv2d-4                    [-1, 32, 80, 106]         9,248     
+BatchNorm2d-5               [-1, 32, 80, 106]         64        
+MaxPool2d-6                 [-1, 32, 40, 53]          0         
+Conv2d-7                    [-1, 32, 40, 53]          9,248     
+BatchNorm2d-8               [-1, 32, 40, 53]          64        
+MaxPool2d-9                 [-1, 32, 20, 26]          0         
+Conv2d-10                   [-1, 32, 20, 26]          9,248     
+BatchNorm2d-11              [-1, 32, 20, 26]          64        
+Conv2d-12                   [-1, 32, 20, 26]          25,632    
+BatchNorm2d-13              [-1, 32, 20, 26]          64        
+MaxPool2d-14                [-1, 32, 10, 13]          0         
+Linear-15                   [-1, 128]                 532,608   
+Dropout1d-16                [-1, 128]                 0         
+Linear-17                   [-1, 64]                  8,256     
+Dropout1d-18                [-1, 64]                  0         
+Linear-19                   [-1, 17]                  1,105     
+=======================================================================================
+Total params: 596,561
+Trainable params: 596,561
+Non-trainable params: 0
+---------------------------------------------------------------------------------------
+
+
 
 ##### Treinamento da Shallow U-net
 
