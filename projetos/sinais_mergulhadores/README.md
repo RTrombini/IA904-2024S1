@@ -337,15 +337,11 @@ As seguintes transformações foram aplicadas aos dados de treinamento utilizand
 
 ##### Matriz de confusão:
 
-- Segue abaixo a matriz de confusão  com os valores absolutos da detecção no dataset de testes:
-
-![confusion_matrix](https://github.com/RTrombini/IA904-2024S1/assets/114251488/84bfc854-e3f8-4513-8604-8dc3283a61dc)
-
-
 - Segue abaixo a matriz de confusão  normalizada da detecção no dataset de testes:
 
-![confusion_matrix_normalized](https://github.com/RTrombini/IA904-2024S1/assets/114251488/cdfe5e42-3790-44b9-869c-4c4eb3f57ffe)
 
+
+![matriz_confusao](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ff2a9f1f-528c-48ae-9c4b-1bb658bdfc6c)
 
 ##### Classes Corretamente Classificadas
 
