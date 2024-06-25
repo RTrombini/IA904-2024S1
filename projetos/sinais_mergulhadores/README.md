@@ -421,16 +421,17 @@ As seguintes transformações foram aplicadas aos dados de treinamento utilizand
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos</summary>
 
-| Comando            | Exemplo                                                        | Comando            | Exemplo                                                        |
-|--------------------|-----------------------------------------------------------------|--------------------|----------------------------------------------------------------|
-| Start_comm         | ![Image 1](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e3baf444-2248-4fd9-a685-0f0018646604) | End_comm           | ![Image 2](https://github.com/RTrombini/IA904-2024S1/assets/114251488/92a3a846-bf6f-45bd-90ec-9bb845e7303c) |
-| Up                 | ![Image 3](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e5fa9164-a62b-4943-88ca-97ba5a0d128e) | Down               | ![Image 4](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b9bf5fd3-fca9-48ea-8d07-56c7d7625b36) |
-| Photo              | ![Image 5](https://github.com/RTrombini/IA904-2024S1/assets/114251488/be407c4a-f562-459f-90a4-1c282be64c3e) | Backwards          | ![Image 6](https://github.com/RTrombini/IA904-2024S1/assets/114251488/d3db314e-8c55-4fe5-8def-ea1d64aa11ec) |
-| Carry              | ![Image 7](https://github.com/RTrombini/IA904-2024S1/assets/114251488/88feb56e-8303-4f5f-a0e0-97aadcf2d816) | Boat               | ![Image 8](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ecdd8bb3-418f-4fe6-91a1-28510a15b93e) |
-| Here               | ![Image 9](https://github.com/RTrombini/IA904-2024S1/assets/114251488/b0d8d429-0af2-4e1b-a841-04998398659b) | Num_delimiter      | ![Image 10](https://github.com/RTrombini/IA904-2024S1/assets/114251488/6154ce84-c3bc-4276-a4cb-51e16169f317) |
-| One                | ![Image 11](https://github.com/RTrombini/IA904-2024S1/assets/114251488/8e8c66a1-de9d-4035-9e93-9f5334c1203d) | Two                | ![Image 12](https://github.com/RTrombini/IA904-2024S1/assets/114251488/578c3f88-e4aa-44dc-b1f3-f354cd210616) |
-| Three              | ![Image 13](https://github.com/RTrombini/IA904-2024S1/assets/114251488/90468027-68cc-45b9-8cdc-ff050c44f061) | Four               | ![Image 14](https://github.com/RTrombini/IA904-2024S1/assets/114251488/395fc8ef-3304-495e-82a8-8e8702ac7e18) |
-| Five               | ![Image 15](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ae38eb6f-331f-4e68-ae99-bc9a9866d01c) | Negative           | ![Image 16](https://github.com/RTrombini/IA904-2024S1/assets/114251488/9553fb1e-c831-4399-9740-7f6c0991d2f8) |
+| Comando        | Exemplo                                                        | Comando         | Exemplo                                                        |
+|----------------|----------------------------------------------------------------|-----------------|----------------------------------------------------------------|
+| Start_comm     | ![start_com](https://github.com/RTrombini/IA904-2024S1/assets/114251488/15a2e9fe-3323-4f69-8f85-c768e96263e2) | Up              | ![up](https://github.com/RTrombini/IA904-2024S1/assets/114251488/569e165b-c0de-491f-9ee8-b877e10c0654) |
+| Down           | ![down](https://github.com/RTrombini/IA904-2024S1/assets/114251488/45c43049-c052-40b2-aade-cc9c31cc8e6c) | Photo           | ![photo](https://github.com/RTrombini/IA904-2024S1/assets/114251488/a3c7c7b7-aec2-45b2-b7c1-4239dd83ab94) |
+| Backwards      | ![backwards](https://github.com/RTrombini/IA904-2024S1/assets/114251488/ec93ee23-5fba-4591-90c5-45f90677df42) | Carry           | ![carry](https://github.com/RTrombini/IA904-2024S1/assets/114251488/5f2909c4-3150-4526-b201-d604d96ab4ad) |
+| Boat           | ![boat](https://github.com/RTrombini/IA904-2024S1/assets/114251488/1de76e5d-877a-4d83-9d5c-3427b06b5227) | Here            | ![here](https://github.com/RTrombini/IA904-2024S1/assets/114251488/f34a67ee-be11-48d3-a672-32984a6fc3e5) |
+| Num_delimiter  | ![num_delimiter](https://github.com/RTrombini/IA904-2024S1/assets/114251488/378f3cb7-80c8-4f83-8bc1-7afc6fc6a60a) | One             | ![one](https://github.com/RTrombini/IA904-2024S1/assets/114251488/39d3c371-6d82-4080-a5a1-4a38187641c7) |
+| Two            | ![two](https://github.com/RTrombini/IA904-2024S1/assets/114251488/9e38bcfe-a82e-4d9a-bd7e-2aad0fcb830c) | Three           | ![three](https://github.com/RTrombini/IA904-2024S1/assets/114251488/e986f257-9feb-41fa-b2fe-b3ff8580a946) |
+| Four           | ![four](https://github.com/RTrombini/IA904-2024S1/assets/114251488/3fbfa2ac-60ff-4d21-9881-79f594d8df5a) | Five            | ![five](https://github.com/RTrombini/IA904-2024S1/assets/114251488/bb105794-46b7-481b-9589-55af5a0e77e0) |
+| End_comm       | ![end_com](https://github.com/RTrombini/IA904-2024S1/assets/114251488/da66fa64-eaf6-41ce-81a0-6f9022384fce) |                 |                                                                |
+
 
 </details>
 
