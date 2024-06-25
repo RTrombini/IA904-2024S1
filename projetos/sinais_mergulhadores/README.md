@@ -85,6 +85,10 @@ A distribuição do conjunto de dados é a seguinte:
 
 ## Workflow
 
+
+![workflow](https://github.com/Disciplinas-FEEC/IA904-2024S1/assets/114251488/49fee3a4-8d6a-44f0-875c-2b6a0f014a55)
+
+
 ### Detecção com YOLO
 
 #### 1. Preparação do Dataset
