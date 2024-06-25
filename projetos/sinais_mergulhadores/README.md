@@ -167,6 +167,7 @@ O treinamento foi realizado numa máquina local com uma gpu NVIDIA 4070 de 12 GB
 
 ## Workflow
 
+
 A continuação se apressenta o workflow seguido pelo grupo, onde primeiro foi feita uma exploração dos dados divulgados pelo grupo CADDY, a partir dos quais foram obtidos insights sobre as abordagens que se poderiam ser tomadas para resolver o problema, decidindo fazer uma comparação entre dois modelos de Deep Learning. Finalmente, depois de iterações e refinamentos dos modelos se realizou uma avaliação com um conjunto de teste específico para os dois modelos.
 
 ![workflow](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/workflow.png)
@@ -341,7 +342,7 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 ##### Treinamento da YOLOv8 Nano
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
-- Esse dataset foi dividido em 76.5% para treino, 10% para validação e 13.5% para teste.
+- Esse dataset foi dividido em 72% para treino, 10% para validação e 18% para teste.
 - O dataset foi preparado mantendo apenas as imagens da direita, eliminando duplicações das imagens estéreo.
 
 ###### Aumento dos Dados
