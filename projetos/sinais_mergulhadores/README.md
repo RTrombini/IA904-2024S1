@@ -132,6 +132,11 @@ O treinamento foi realizado numa máquina local com uma gpu NVIDIA 4070 de 12 GB
 
 ## Workflow
 
+A continuação se apressenta o workflow seguido pelo grupo, onde primeiro foi feita uma exploração dos dados divulgados pelo grupo CADDY, a partir dos quais foram obtidos insights sobre as abordagens que se poderiam ser tomadas para resolver o problema, decidindo fazer uma comparação entre dois modelos de Deep Learning. Finalmente, depois de iterações e refinamentos dos modelos se realizou uma avaliação com um conjunto de teste específico para os dois modelos.
+
+![workflow](https://raw.githubusercontent.com/RTrombini/IA904-2024S1/main/projetos/sinais_mergulhadores/assets/exampleResults_class0.png)
+
+
 ### Detecção com YOLO
 
 #### 1. Preparação do Dataset
@@ -409,6 +414,8 @@ Os resultados obtidos indicam um bom desempenho do modelo YOLOv8 na detecção e
 
 #### Experimentos
 
+Apartir dos resultados obtidos com a YOLO-v8 nano, apareceu a pergunta de se era possível obter resultados no mesmo nível com menos parâmetros treináveis, pegando en conta que a ideia do projeto é que o modelo seja embarcável num robô subaquático. Nesse sentido, o uso de uma rede de segmentação mais uma rede de classificação deveria realizar de maneira satisfátoria essa tarefa. Nós escolhimos uma variação da U-net original, chamada Shallow U-net, pois tem menos camadas de profundidade para o encoder-decoder, assim mesmo tem menos camadas de filtros, reduzindo o número de parâmetros desde o início. No caso da rede CNN, se armou uma estrutura com 4 camadas convolucionais com batch normalization e função de ativação ReLU para fazer a extracção de características das imagens filtradas pela Shallow U-net e umas camadas Fully connected com regularização Dropout para aumentar a sua generalização e fazer a classificação do gesto feito pelo mergulhador.
+
 ##### Treinamento da Shallow U-net
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
@@ -487,8 +494,6 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 
 - Intersection over Union (IoU): 0.90
 - Pixel accuracy: 0.82
-
-
 
 <details>
 <summary title="Click to Expand/Collapse">Exemplos de gestos segmentados</summary>
