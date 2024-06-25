@@ -33,7 +33,7 @@ O desenvolvimento do sistema de detecção e classificação de gestos subaquát
 
 - **Shallow U-Net**: Utilizada para a segmentação das mãos.
 - **CNN**: Utilizada para a classificação das ROIs em gestos específicos.
-- **Frameworks**: TensorFlow e Keras foram utilizados para implementar e treinar os modelos.
+- **Frameworks**: Pytorch foi utilizado para implementar e treinar os modelos.
 - **Pré-processamento de Imagens**: Técnicas de aumento de dados como rotação, espelhamento e ajuste de contraste foram aplicadas para melhorar a robustez do modelo.
 
 ### Modelo Integrado de Detecção e Classificação (YOLOv8)
@@ -624,8 +624,6 @@ Como o treinamento da rede Shallow U-net + CNN teve duas etapas, se obtiveram du
 
 ## Discussão
 
-## Discussão
-
 A motivação central deste projeto é desenvolver um sistema eficaz para identificar e interpretar sinais de mão de mergulhadores, com o objetivo de melhorar a comunicação subaquática e a segurança durante mergulhos. Este sistema se inspira no projeto CADDY, que visa entender o comportamento dos mergulhadores através da interpretação de gestos manuais simbólicos e indicadores não verbais. Para atingir este objetivo, foram exploradas duas abordagens principais: a detecção e classificação de gestos utilizando a YOLOv8 e a combinação de segmentação com a Shallow U-Net seguida por uma classificação com uma CNN.
 
 O treinamento do modelo YOLOv8 nano envolveu a preparação do dataset, incluindo a conversão das coordenadas de ROI para o formato YOLO. Utilizamos 100 épocas com imagens de 640x640 pixels. Os resultados obtidos foram:
@@ -645,8 +643,6 @@ Comparando os dois métodos, o método Shallow U-Net + CNN, devido ao seu menor 
 
 Esta análise destaca a importância de considerar não apenas a performance bruta, mas também a eficiência e a aplicabilidade prática ao escolher e desenvolver modelos de Machine Learning para detecção de gestos subaquáticos.
 
-
-## Conclusão
 
 ## Conclusão
 
@@ -681,8 +677,6 @@ Este projeto não apenas avançou na área de detecção de gestos subaquáticos
 
 
 ## Trabalhos futuros
-
-## Trabalhos Futuros
 
 Com mais tempo e recursos, há várias áreas que poderiam ser exploradas e melhoradas para fortalecer ainda mais os resultados obtidos neste projeto.
 
