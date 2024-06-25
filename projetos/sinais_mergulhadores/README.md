@@ -342,7 +342,7 @@ Realizamos um experimento com o modelo YOLOv8 para avaliar a dificuldade de dete
 ##### Treinamento da YOLOv8 Nano
 
 ###### Divisão em Conjuntos de Treino, Validação e Teste:
-- Esse dataset foi dividido em 76.5% para treino, 10% para validação e 13.5% para teste.
+- Esse dataset foi dividido em 72% para treino, 10% para validação e 18% para teste.
 - O dataset foi preparado mantendo apenas as imagens da direita, eliminando duplicações das imagens estéreo.
 
 ###### Aumento dos Dados
